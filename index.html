@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>美线亚马逊销售业务地图</title>
+<style>
+:root{--ink:#081426;--muted:#667085;--sub:#475467;--line:#dbe3ef;--soft:#f6f8fb;--paper:#fff;--navy:#07172f;--blue:#276ef1;--gold:#a57928;--teal:#08746f;--danger:#b42318;--shadow:0 18px 55px rgba(15,23,42,.10);--shadow-strong:0 30px 90px rgba(15,23,42,.18);--radius:26px;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#ffffff 0%,#f7f9fc 100%);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif;line-height:1.45;}a{color:inherit;text-decoration:none}
+.page{max-width:1880px;margin:0 auto;padding:24px 28px 112px;}
+body{padding-top:116px;}
+.hero{position:relative;z-index:20;background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:30px;padding:22px 28px;margin-bottom:18px;box-shadow:0 16px 50px rgba(15,23,42,.08);}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:950;margin-bottom:8px}
+h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329;font-weight:950}
+.subline{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:14px}.subline strong{color:#162033}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.legend span{border:1px solid color-mix(in srgb,var(--stage-color),#fff 62%);background:color-mix(in srgb,var(--stage-color),#fff 92%);color:var(--stage-color);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:850}
+.column-head{display:grid;grid-template-columns:1.02fr 1.35fr 1.15fr 1.18fr 1.55fr;gap:12px;margin:0 0 10px;padding:0 8px;color:#344054;font-size:13px;font-weight:900;letter-spacing:.04em;position:sticky;top:146px;z-index:19;}
+.column-head div{background:#eef3fb;border:1px solid #dbe5f2;border-radius:14px;padding:9px 12px;text-align:center;box-shadow:0 10px 26px rgba(15,23,42,.05)}
+.map-list{display:flex;flex-direction:column;gap:13px;}
+.stage-card{display:grid;grid-template-columns:1.02fr 1.35fr 1.15fr 1.18fr 1.55fr;gap:12px;align-items:stretch;border:1px solid #dce4ef;background:rgba(255,255,255,.94);border-radius:var(--radius);padding:12px;box-shadow:0 12px 35px rgba(15,23,42,.065);transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;scroll-margin-top:206px;transform-origin:center;}
+.stage-card:hover{transform:scale(1.018);box-shadow:var(--shadow-strong);border-color:#b9c9de;background:#fff;z-index:8;position:relative}
+.stage-card.meeting-card{border-color:#ead7ac;background:linear-gradient(90deg,#fffaf0 0%,#fff 20%,#fff 100%)}
+.stage-index{border-radius:20px;border:1px solid color-mix(in srgb,var(--stage-color),#fff 72%);background:linear-gradient(145deg,color-mix(in srgb,var(--stage-color),#fff 91%),#fff);padding:16px;display:grid;grid-template-columns:64px 1fr;grid-template-rows:auto auto auto 1fr;gap:7px 12px;min-height:188px;}
+.num{grid-row:1/4;width:64px;height:64px;border-radius:20px;background:var(--stage-color);color:#fff;display:grid;place-items:center;font-size:21px;font-weight:950;letter-spacing:-.03em;box-shadow:0 14px 32px color-mix(in srgb,var(--stage-color),transparent 70%);}
+.phase{font-size:15px;font-weight:950;color:var(--stage-color);align-self:end}h2{font-size:27px;line-height:1.04;margin:0;font-weight:950;letter-spacing:-.04em;color:#071529}.purpose{display:inline-flex;width:max-content;align-items:center;border-radius:999px;padding:4px 10px;background:#fff;color:#344054;border:1px solid #d6deea;font-size:13px;font-weight:850}
+.standard-box{grid-column:1/-1;margin-top:6px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid #d9e2ef;padding:10px 12px}.standard-box b{display:block;color:#667085;font-size:12px;margin-bottom:3px}.standard-box span{font-size:16px;font-weight:900;color:#172033}
+.panel{border:1px solid #e1e8f2;border-radius:20px;background:#fff;padding:14px;min-height:188px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;overflow:hidden}.stage-card:hover .panel{border-color:#cfdae8}.panel:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(15,23,42,.12)}
+.panel-kicker{display:inline-flex;align-items:center;width:max-content;max-width:100%;font-size:16px;letter-spacing:.04em;color:#071529;text-transform:none;font-weight:1000;margin-bottom:8px;padding:3px 9px;border-radius:999px;background:#eef5ff;border:1px solid #cfe0f7}h3{font-size:15px;line-height:1.2;margin:0 0 9px;color:#111b2e;font-weight:950}h4{font-size:13px;margin:10px 0 6px;color:#344054;font-weight:950}ul{margin:0;padding-left:18px}li{font-size:13px;margin:4px 0;color:#344054}.action-list li,.request-list li{font-weight:750;color:#182236}.empty{font-size:13px;color:#98a2b3;background:#f8fafc;border:1px dashed #d7dfeb;border-radius:12px;padding:8px 10px}
+.sub-panel{margin-top:11px;padding-top:10px;border-top:1px dashed #d9e2ef}
+.meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.meta-grid div{background:#f7f9fc;border:1px solid #e3e9f2;border-radius:14px;padding:9px}.meta-grid b{display:block;font-size:11px;color:#667085;margin-bottom:3px}.meta-grid span{font-size:13px;font-weight:850;color:#172033}.bool.yes{color:#08746f}.bool.no{color:#8a4b00}
+.audit{margin-top:10px;border-radius:16px;padding:11px 12px;border:1px solid #dce4ef;background:#f8fafc;display:flex;justify-content:space-between;gap:12px;align-items:center}.audit b{font-size:12px;color:#667085}.audit span{font-size:14px;font-weight:950}.audit-meeting{background:linear-gradient(135deg,#07172f,#17345d);border-color:#07172f;color:#fff;box-shadow:0 14px 34px rgba(7,23,47,.22)}.audit-meeting b{color:#d9e7ff}.audit-normal span{color:#344054}
+.doc-links{display:flex;flex-direction:column;gap:7px}.doc-link{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;border:1px solid #dae3ef;background:#f8fbff;border-radius:14px;padding:9px 10px;transition:transform .18s ease, border-color .18s ease, background .18s ease}.doc-link:hover{transform:translateX(4px);border-color:#9db7da;background:#eef6ff}.doc-link span{font-size:13px;font-weight:850;color:#172033}.doc-link em{font-size:11px;font-style:normal;color:#276ef1;font-weight:900;white-space:nowrap}
+.detail-list li{font-size:12.5px;line-height:1.35;color:#475467}
+.float-nav{position:fixed;left:50%;bottom:14px;transform:translateX(-50%) translateY(0);z-index:30;width:min(1760px,calc(100vw - 36px));pointer-events:none;opacity:1;transition:opacity .22s ease, transform .22s ease}.float-nav-inner{pointer-events:auto;display:grid;grid-template-columns:repeat(21,minmax(0,1fr));gap:5px;padding:7px;background:rgba(7,23,47,.88);border:1px solid rgba(255,255,255,.16);box-shadow:0 22px 80px rgba(7,23,47,.32);backdrop-filter:blur(18px);border-radius:22px;}
+.float-nav a{min-width:0;height:44px;border-radius:14px;color:#e9f1ff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:10px;font-weight:850;transition:transform .20s ease, background .20s ease, color .20s ease, box-shadow .20s ease;transform-origin:bottom center;}.float-nav a b{font-size:11px;color:#b6c8e6}.float-nav a span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 3px}
+.float-nav a:hover{transform:scale(1.42) translateY(-7px);background:#fff;color:#07172f;box-shadow:0 16px 34px rgba(0,0,0,.22);z-index:3}.float-nav a:hover b{color:#276ef1}
+@media(max-width:1440px){body{padding-top:102px}.page{padding:18px 18px 104px}h1{font-size:30px}.column-head,.stage-card{grid-template-columns:.95fr 1.25fr 1.1fr 1.08fr 1.42fr}.column-head{top:146px}.stage-card{gap:9px;padding:10px;scroll-margin-top:202px}.stage-index,.panel{padding:12px}h2{font-size:23px}li{font-size:12.5px}.float-nav-inner{gap:3px}.float-nav a{height:38px;font-size:9px}}
+@media(max-width:1100px){body{padding-top:0}.hero-top{position:static;transform:none;width:auto}.hero,.column-head{position:static}.column-head{display:none}.stage-card{grid-template-columns:1fr;scroll-margin-top:16px}.stage-index{min-height:auto}.float-nav-inner{grid-template-columns:repeat(7,1fr);max-height:160px;overflow:auto}.float-nav a:hover{transform:scale(1.08)}}
+.stage-card.nav-peek{transform:scale(1.018);box-shadow:var(--shadow-strong);border-color:#9db7da;z-index:9;position:relative}
+
+.hero-top{position:fixed;left:50%;top:10px;transform:translateX(-50%);width:min(1824px,calc(100vw - 56px));display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:16px;align-items:center;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(18px);border:1px solid #dbe3ef;border-radius:20px;padding:10px 16px;box-shadow:0 12px 38px rgba(15,23,42,.12);}
+.hero-title-block{min-width:0}.hero-title-block .eyebrow{margin-bottom:3px;font-size:10px}.hero-title-block .subline{margin-top:5px;font-size:12px}.hero-title-block .legend{margin-top:6px;gap:5px}.hero-title-block .legend span{padding:3px 7px;font-size:10px}.hero-qr{margin:0;justify-self:end;text-align:center;border:1px solid #dce4ef;background:#fff;border-radius:14px;padding:6px;box-shadow:0 8px 20px rgba(15,23,42,.08);position:relative;z-index:70;cursor:zoom-in;transform-origin:top right;transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease}.hero-qr:hover,.hero-qr.hover-preview{transform:scale(2.35);box-shadow:0 28px 90px rgba(7,23,47,.32);border-color:#9db7da}.hero-qr img{width:72px;height:72px;object-fit:contain;display:block;border-radius:8px}.hero-qr small{display:block;margin-top:4px;color:#667085;font-size:10px;font-weight:800;line-height:1.15}
+.relation-section,.core-section{margin-top:18px;border:1px solid #dce4ef;background:linear-gradient(180deg,#fff,#f9fbff);border-radius:24px;padding:16px 18px;box-shadow:0 12px 30px rgba(15,23,42,.045)}.section-title{display:flex;align-items:center;gap:10px;margin:0 0 12px;color:#071529;font-size:18px;font-weight:950;letter-spacing:-.02em}.section-title::before{content:"";width:8px;height:20px;border-radius:999px;background:#276ef1;box-shadow:0 8px 18px rgba(39,110,241,.24)}
+.process-flow{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin}.flow-node{flex:0 0 auto;border:1px solid #cfdbea;background:#fff;color:#102038;border-radius:999px;padding:9px 12px;font-size:13px;font-weight:950;box-shadow:0 8px 18px rgba(15,23,42,.055);white-space:nowrap}.flow-node.strong{background:#07172f;color:#fff;border-color:#07172f}.flow-arrow{flex:0 0 auto;color:#98a2b3;font-weight:950}.review-node{display:flex;gap:6px;align-items:center}.review-node span{display:inline-flex;border-radius:999px;padding:5px 8px;background:#fff7e8;border:1px solid #f0d69c;color:#805500;font-size:12px;font-weight:900}
+.role-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:9px;margin-top:10px}.role-card{border:1px solid #dae3ef;background:#fff;border-radius:16px;padding:11px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}.role-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(15,23,42,.11);border-color:#9db7da}.role-card b{display:block;font-size:14px;color:#071529;margin-bottom:5px}.role-card span{display:block;min-height:34px;font-size:12px;line-height:1.35;color:#667085}.inline-feishu{display:inline-flex;margin-top:8px;color:#276ef1;font-size:12px;font-weight:950;text-decoration:none}.inline-feishu:hover{text-decoration:underline}
+.core-grid{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));gap:10px}.core-card{border:1px solid #d8e3f0;background:#fff;border-radius:18px;padding:13px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}.core-card.primary{grid-column:span 5;background:linear-gradient(135deg,#07172f,#163866);border-color:#07172f;color:#fff;box-shadow:0 18px 42px rgba(7,23,47,.18)}.core-card.secondary{grid-column:span 3;background:#fff}.core-card.pending{border-style:dashed;background:#f8fafc;color:#667085}.core-card.primary b,.core-card.primary .core-link{color:#fff}.core-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(15,23,42,.11);border-color:#9db7da}.core-card.pending:hover{transform:none;box-shadow:none;border-color:#cbd5e1}.core-card b{font-size:15px;color:#071529}.core-link{font-size:12px;font-style:normal;color:#276ef1;font-weight:950;white-space:nowrap;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;position:relative;z-index:5;pointer-events:auto;cursor:pointer}.core-link:hover{text-decoration:none;filter:brightness(1.08)}.core-card.pending .core-link{color:#98a2b3;pointer-events:none;border-bottom-style:dashed}.business-calendar{margin-top:14px;border:1px solid #d8e3f0;background:#fff;border-radius:20px;padding:14px}.calendar-title{margin:0 0 10px;font-size:17px;font-weight:1000;color:#071529;letter-spacing:-.02em}.calendar-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}.calendar-card{border:1px solid #e0e7f1;background:linear-gradient(180deg,#fbfdff,#fff);border-radius:16px;padding:11px 12px;min-height:118px}.calendar-card b{display:block;font-size:14px;color:#276ef1;margin-bottom:8px}.calendar-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}.calendar-list li{display:flex;gap:5px;align-items:flex-start;margin:0;font-size:12.5px;line-height:1.38;color:#344054;font-weight:750}.calendar-list li::first-letter{font-weight:950;color:#07172f}
+@media(max-width:1440px){.hero-top{grid-template-columns:minmax(0,1fr) 90px;width:min(1404px,calc(100vw - 36px));padding:9px 14px}.hero-qr img{width:66px;height:66px}.role-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.core-grid{grid-template-columns:repeat(15,minmax(0,1fr))}.core-card.primary{grid-column:span 5}.core-card.secondary{grid-column:span 3}.calendar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1100px){.hero-top{grid-template-columns:1fr}.hero-qr{justify-self:start}.role-grid,.core-grid,.calendar-grid{grid-template-columns:1fr}.core-card.primary,.core-card.secondary{grid-column:auto}.process-flow{align-items:stretch}.flow-node{white-space:normal}.flow-arrow{display:none}}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+.core-card .core-link{position:relative;z-index:5;pointer-events:auto;cursor:pointer}</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="hero-top">
+      <div class="hero-title-block">
+        <div class="eyebrow">Amazon Sales Business Map</div>
+        <h1>美线客厅家具柜销售业务地图</h1>
+        <div class="subline"><span>面向亚马逊新人销售的阶段任务、协同关系、输出要求与过关标准。</span></div>
+        <div class="legend"><span style="--stage-color:#204f9c">筑基期</span><span style="--stage-color:#7a4b12">掌旗期</span><span style="--stage-color:#08746f">操盘期</span></div>
+      </div>
+      <figure class="hero-qr">
+        <img src="data:image/jpeg;base64,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" alt="美线大群二维码" />
+        <small>扫码进入美线大群</small>
+      </figure>
+    </div>
+    <section class="relation-section" aria-labelledby="relation-title">
+      <h2 class="section-title" id="relation-title">人物关系图</h2>
+      <div class="process-flow" aria-label="业务推进链路">
+        <span class="flow-node">PM构思</span><span class="flow-arrow">→</span><span class="flow-node">BUS初筛</span><span class="flow-arrow">→</span><span class="flow-node">产销拉通</span><span class="flow-arrow">→</span><span class="flow-node strong">XDCP推进</span><span class="review-node"><span>组长评审</span><span>公司上会</span></span><span class="flow-arrow">→</span><span class="flow-node">新品上市</span><span class="flow-arrow">→</span><span class="flow-node">销售操盘</span><span class="flow-arrow">→</span><span class="flow-node">业务定点复盘</span><span class="flow-arrow">→</span><span class="flow-node">产品留存/下市</span>
+      </div>
+      <div class="role-grid"><a class="role-card" href="https://example.feishu.cn/wiki/marketing-bp" target="_blank" rel="noopener"><b>营销BP</b><span>营销相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/planning-bp" target="_blank" rel="noopener"><b>计划BP</b><span>库存相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/team-leader" target="_blank" rel="noopener"><b>组长</b><span>所有业务支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/pm" target="_blank" rel="noopener"><b>PM</b><span>产品相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/vc" target="_blank" rel="noopener"><b>VC</b><span>促销相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/data-analysis" target="_blank" rel="noopener"><b>数分</b><span>数据相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/bus" target="_blank" rel="noopener"><b>BUS</b><span>上会拉通支持</span><i class="inline-feishu">点入飞书链接</i></a></div>
+    </section>
+    <section class="core-section" aria-labelledby="core-title">
+      <h2 class="section-title" id="core-title">美国核心业务</h2>
+      <div class="core-grid"><div class="core-card primary"><b>美国价促</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/LlxDww0CtiQJevkfzQccladcneb" target="_blank" rel="noopener noreferrer" title="美国价促：[点入飞书链接](https://songmicshome.feishu.cn/wiki/LlxDww0CtiQJevkfzQccladcneb)" aria-label="美国价促 点入飞书链接">点入飞书链接</a></div><div class="core-card primary"><b>美国营销</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/RAQtwWAI1iGHXxkQ8A2cKG41nlg" target="_blank" rel="noopener noreferrer" title="美国营销：[点入飞书链接](https://songmicshome.feishu.cn/wiki/RAQtwWAI1iGHXxkQ8A2cKG41nlg)" aria-label="美国营销 点入飞书链接">点入飞书链接</a></div><div class="core-card primary"><b>美国案例</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/RRHNwOZQfitK4ZkDIx9cWnVmncc" target="_blank" rel="noopener noreferrer" title="美国案例：[点入飞书链接](https://songmicshome.feishu.cn/wiki/RRHNwOZQfitK4ZkDIx9cWnVmncc)" aria-label="美国案例 点入飞书链接">点入飞书链接</a></div><div class="core-card secondary"><b>美国业务</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/WngIwaxwri8GAUk5msEcNEKhnze" target="_blank" rel="noopener noreferrer" title="美国业务：[点入飞书链接](https://songmicshome.feishu.cn/wiki/WngIwaxwri8GAUk5msEcNEKhnze)" aria-label="美国业务 点入飞书链接">点入飞书链接</a></div><div class="core-card secondary"><b>美国任务</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/INspwCcodirJSake4n3cy5E6nfc" target="_blank" rel="noopener noreferrer" title="美国任务：[点入飞书链接](https://songmicshome.feishu.cn/wiki/INspwCcodirJSake4n3cy5E6nfc)" aria-label="美国任务 点入飞书链接">点入飞书链接</a></div><div class="core-card secondary"><b>美国库存</b><a class="core-link" href="https://songmicshome.feishu.cn/sheets/VFiDsOlS0hgQhZtVDJicjQdqnLc" target="_blank" rel="noopener noreferrer" title="美国库存：[点入飞书链接](https://songmicshome.feishu.cn/sheets/VFiDsOlS0hgQhZtVDJicjQdqnLc)" aria-label="美国库存 点入飞书链接">点入飞书链接</a></div><div class="core-card secondary"><b>美国线上路径</b><a class="core-link" href="https://songmicshome.feishu.cn/drive/folder/Qs5bfW5vUlsOGEdrCPlcijaxn2e" target="_blank" rel="noopener noreferrer" title="美国线上路径：[点入飞书链接](https://songmicshome.feishu.cn/drive/folder/Qs5bfW5vUlsOGEdrCPlcijaxn2e)" aria-label="美国线上路径 点入飞书链接">点入飞书链接</a></div><div class="core-card secondary pending" title="链接待定"><b>美国组织架构</b><span class="core-link" aria-disabled="true">点入飞书链接</span></div></div>
+      <div class="business-calendar" aria-labelledby="calendar-title">
+        <h3 class="calendar-title" id="calendar-title">业务日历</h3>
+        <div class="calendar-grid">
+          <div class="calendar-card"><b>周一</b><ul class="calendar-list"><li>① DDP接单</li><li>② 活动提报</li><li>③ 自身榜单巡检</li><li>④ 新品上架</li><li>⑤ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周二</b><ul class="calendar-list"><li>① <a href="https://songmicshome.feishu.cn/sheets/MQgosZoArheTVPt8X18cgMOznkc?sheet=dwpUUg" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">站外提报</a></li><li>② 活动审核</li><li>③ 自身榜单巡检</li><li>④ 新品上架</li><li>⑤ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周三</b><ul class="calendar-list"><li>① 周度数据更新（价促营库销）</li><li>② 自身榜单巡检</li><li>③ 新品上架</li><li>④ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周四</b><ul class="calendar-list"><li>① BTR接单</li><li>② 活动调整</li><li>③ <a href="https://songmicshome.feishu.cn/wiki/S7klww2jEi8pY9kqNlbcoWt8nle?sheet=LogTyS" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">冲坑复盘</a></li><li>④ 自身榜单巡检</li><li>⑤ 新品上架</li><li>⑥ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周四</b><ul class="calendar-list"><li>① 周度项目复盘（价促营库销）</li><li>② 自身榜单巡检</li><li>③ 新品上架</li><li>④ XDCP推进</li></ul></div>
+        </div>
+      </div>
+    </section>
+    <section class="core-section" aria-labelledby="inner-core-title">
+      <h2 class="section-title" id="inner-core-title">组内核心业务</h2>
+      <div style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+        <span style="border:1px solid #cfdbea;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:900;color:#071529">数据说话-做细</span>
+        <span style="border:1px solid #cfdbea;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:900;color:#071529">围绕业务-论果</span>
+        <span style="border:1px solid #cfdbea;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:900;color:#071529">多劳多得-观行</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+        <div class="core-card secondary" style="grid-column:auto"><b>操作手册</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/FX9EwmpyjiQvgNkfxVscT2Kynnd?sheet=c3b2ti&amp;table=tblFdl8StzkLZVuN&amp;view=vewlMpFOrY" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>任务手册</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/INspwCcodirJSake4n3cy5E6nfc?sheet=I5nag9" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>管理手册</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/OUAtwiuhtiZ1IDk1VQFcH1aKnfg" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>新品手册</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/LL2GwjpHwiQqCXkfiLkc4hqqnig?sheet=Hk9keO" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>模板库</b><a class="core-link" href="https://songmicshome.feishu.cn/drive/folder/YanLfh14DlpVqkdDjlOcmg5Cnog?from=space_personal_filelist" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>案例库</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/AJvVw1VoPisFJvkuJnfcnf3PnLg" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>销售AI</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/MbqUwtsCsiNqi2k912DcBdDjnHu" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>榜单巡检</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/FckSwEFgxizJHdk60mHcx84Fn9f?table=tbl1jpO54NC0rxTQ&amp;view=vewEcBOGTR" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>销坑表</b><a class="core-link" href="https://songmicshome.feishu.cn/sheets/ULWLsuppOhHq99t8aFvcwP68nYg?sheet=rTPf87" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+      </div>
+    </section>
+    <section class="core-section" aria-labelledby="sales-ops-title">
+      <h2 class="section-title" id="sales-ops-title">销售操盘业务</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px">
+        <div class="core-card secondary" style="grid-column:auto"><b>VC报价</b><a class="core-link" href="https://songmicshome.feishu.cn/sheets/QHtLsubcRhLpWftS1EncaADBnHf?sheet=3WUgjp" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>比价</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/VMqrw9eyQivOrakH1XvcFkZKnDh?sheet=HZUDH7" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>VC促销</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/VX9MwWjPtiCIRTkWhAScFBKDnbf" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>VC异常1</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/WVg8wjkiPiXtVakAB16cBwXonRb?sheet=V89ebj" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>Andon Cord</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/XZAJwN8Y8i1NkmkCRu7c3DNbnBh?sheet=b9bf16" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>竞卖调研</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/FGbhwsLSBi4vUvkE569cAS5BnTg?sheet=tnatJl&amp;from=from_parent_docs" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+      </div>
+    </section>
+  </header>
+  <div class="column-head" aria-hidden="true"><div>阶段</div><div>阶段目的</div><div>角色梳理</div><div>流程疏通</div><div>其他｜细节</div></div>
+  <main class="map-list">
+    
+<article class="stage-card " id="step-1" data-step="01" data-title="业务认知">
+  <div class="stage-index" style="--stage-color:#204f9c">
+    <div class="num">01</div>
+    <div class="phase">筑基期</div>
+    <h2>业务认知</h2>
+    <div class="purpose">跟着看</div>
+    <div class="standard-box"><b>过关标准</b><span>考核通过</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>培训</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>导师</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>训练</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-1-1" target="_blank" rel="noopener"><span>应届生课程排期-副本</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>培训</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card meeting-card" id="step-2" data-step="02" data-title="品类规划">
+  <div class="stage-index" style="--stage-color:#7a4b12">
+    <div class="num">02</div>
+    <div class="phase">掌旗期</div>
+    <h2>品类规划</h2>
+    <div class="purpose">跟着看</div>
+    <div class="standard-box"><b>过关标准</b><span>无</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 坑位拉通</li><li>② 坑位诉求</li><li>③ 推演纠正</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 市场洞察</li><li>② 分本度</li><li>③ 规一二</li><li>④ 留存计划</li><li>⑤ 坑位优势</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool no">N</span></div>
+    </div>
+    <div class="audit audit-meeting"><b>审核要求</b><span>Y：会议</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-2-1" target="_blank" rel="noopener"><span>拉通SOP</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-2-2" target="_blank" rel="noopener"><span>看什么、怎么看、标准</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-2-3" target="_blank" rel="noopener"><span>做什么、怎么做、标准</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-3" data-step="03" data-title="新品CD">
+  <div class="stage-index" style="--stage-color:#7a4b12">
+    <div class="num">03</div>
+    <div class="phase">掌旗期</div>
+    <h2>新品CD</h2>
+    <div class="purpose">做分析</div>
+    <div class="standard-box"><b>过关标准</b><span>过审</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 外观诉求</li><li>② 单子诉求</li><li>③ 坑位诉求</li><li>④ 分本度诉求</li><li>⑤ 工厂备份</li><li>⑥ 渠道诉求</li><li>⑦ IPMS输出</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 利润核算</li><li>② 竞卖分析</li><li>③ 上架规划</li><li>④ 单子构成</li><li>⑤ 产品定位</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-3-1" target="_blank" rel="noopener"><span>竞品调研方式模板</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-3-2" target="_blank" rel="noopener"><span>新品推进标准表</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 利润核算：价促营退款尾程、特殊CM</li><li>② 竞卖分析：分析数≥3、竞争力对比、外观 &amp; 价促</li><li>③ 上架规划：上架节点</li><li>④ 单子构成：SKU数、SKU类型</li><li>⑤ 产品定位：销量利润目标</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card meeting-card" id="step-4" data-step="04" data-title="新品ND">
+  <div class="stage-index" style="--stage-color:#7a4b12">
+    <div class="num">04</div>
+    <div class="phase">掌旗期</div>
+    <h2>新品ND</h2>
+    <div class="purpose">做推演</div>
+    <div class="standard-box"><b>过关标准</b><span>过审</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 坑销目标</li><li>② 达标节奏</li><li>③ 价促营</li><li>④ 渠道</li><li>⑤ SKU定位</li><li>⑥ 图文视频诉求</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 利润核算</li><li>② 竞卖分析</li><li>③ 上架规划</li><li>④ 单子构成</li><li>⑤ 产品定位</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>推演</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-meeting"><b>审核要求</b><span>Y：会议</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-4-1" target="_blank" rel="noopener"><span>NDCP推演模板：指标推演逻辑</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-4-2" target="_blank" rel="noopener"><span>图片诉求模板：</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-4-3" target="_blank" rel="noopener"><span>购买竞卖报表通道SOP</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-4-4" target="_blank" rel="noopener"><span>新品准入标准表</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>③ 价促营：SET划分（主卖/次卖等）、价格定位、营销力度</li><li>④ 渠道：DDP、DF模式等配比</li><li>⑥ 图文视频诉求：视频要求、主图要求、调性要求（风格 &amp; 场景 &amp; 道具 &amp; 光线等）</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 利润核算：更新确认；价促营退款尾程、特殊CM</li><li>② 竞卖分析：更新确认：核心价、坑、单子构成</li><li>③ 上架规划：更新确认；上架节点</li><li>④ 单子构成：更新确认；SKU数、SKU类型</li><li>⑤ 产品定位：更新确认；销量利润目标</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-5" data-step="05" data-title="图片验收">
+  <div class="stage-index" style="--stage-color:#7a4b12">
+    <div class="num">05</div>
+    <div class="phase">掌旗期</div>
+    <h2>图片验收</h2>
+    <div class="purpose">做验收</div>
+    <div class="standard-box"><b>过关标准</b><span>销售认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 主图</li><li>② 套图</li><li>③ A+</li><li>④ 视频</li><li>⑤ 广告素材</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 数据相关</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool no">N</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-5-1" target="_blank" rel="noopener"><span>图片诉求模板：</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-5-2" target="_blank" rel="noopener"><span>视觉美感SOP</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 主图：原主图、场景主图裁剪备用</li><li>② 套图/A+：风格、曝光、细节</li><li>④ 视频：长短、重点前置</li><li>⑤ 广告素材：SBA/SDA素材图、SBV/SPV/SDV视频素材</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 数据相关：PM检核（尺寸 &amp; 重量）</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-6" data-step="06" data-title="AI文案">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">06</div>
+    <div class="phase">操盘期</div>
+    <h2>AI文案</h2>
+    <div class="purpose">做纠正</div>
+    <div class="standard-box"><b>过关标准</b><span>销售认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 标题</li><li>② 五点</li><li>③ 长描述</li><li>④ 颜色</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 异常反馈</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>导师</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-6-1" target="_blank" rel="noopener"><span>诉求通道链接</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-6-2" target="_blank" rel="noopener"><span>文案编写SOP</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 标题：关键词顺序、200字符（AI提醒）</li><li>② 五点：系列化统一（确定系列范围）、五点第一条描述系列化定义</li><li>③ 长描述：重量确定</li><li>④ 颜色：同颜色命名统一（市场/公司统一）</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 异常反馈：中台人员</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-7" data-step="07" data-title="新品上架">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">07</div>
+    <div class="phase">操盘期</div>
+    <h2>新品上架</h2>
+    <div class="purpose">出报价</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 竞调更新</li><li>② 定价确定</li><li>③ 报价确定</li><li>④ 组长 &amp; VC负责人审核</li><li>⑤ 上架模式</li><li>⑥ 开售条件</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 创建ASIN和OFFER</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS,SPM,BUL</span></div>
+      <div><b>角色要求</b><span>推演</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-7-1" target="_blank" rel="noopener"><span>报价推演SOP：关键指标</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-7-2" target="_blank" rel="noopener"><span>报价上架SOP：审核、上架</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 竞调更新：价、坑、布局</li><li>③ 报价确定：特殊CM、价促营退款</li><li>⑤ 上架渠道模式：VC &amp; SC并行、DF/DDP报价</li><li>⑥ 开售条件：3仓开售、2仓开售的特殊条件</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-8" data-step="08" data-title="单子构建">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">08</div>
+    <div class="phase">操盘期</div>
+    <h2>单子构建</h2>
+    <div class="purpose">提诉求</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 合并内容</li><li>② VINE</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 综合单创建</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-8-1" target="_blank" rel="noopener"><span>运营合作流程链接</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-8-2" target="_blank" rel="noopener"><span>运营合作流程SOP：备选</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-9" data-step="09" data-title="单子关联">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">09</div>
+    <div class="phase">操盘期</div>
+    <h2>单子关联</h2>
+    <div class="purpose">提诉求</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① NEW MODEL</li><li>② A+外链</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 关联项执行</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>BUS</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-9-1" target="_blank" rel="noopener"><span>运营合作流程链接</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-9-2" target="_blank" rel="noopener"><span>运营合作流程SOP：备选</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-10" data-step="10" data-title="官媒发布">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">10</div>
+    <div class="phase">操盘期</div>
+    <h2>官媒发布</h2>
+    <div class="purpose">提诉求</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 旗舰店上新</li><li>② 媒体发布</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>站外营销组</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>BUS</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-10-1" target="_blank" rel="noopener"><span>营销组合作流程链接</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-10-2" target="_blank" rel="noopener"><span>营销组合作流程SOP：备选</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-11" data-step="11" data-title="营销搭建">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">11</div>
+    <div class="phase">操盘期</div>
+    <h2>营销搭建</h2>
+    <div class="purpose">出框架</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 竞卖反查</li><li>② 关键词库更新</li><li>③ M1目标和预算确定</li><li>④ 营销框架搭建</li><li>⑤ 组内审核</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 历史数据分析</li><li>② 前置否定</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>推演</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-11-1" target="_blank" rel="noopener"><span>营销历史数据路径：持续迭代</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-11-2" target="_blank" rel="noopener"><span>广告框架模板</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-11-3" target="_blank" rel="noopener"><span>广告框架SOP</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 竞卖反查：BSR竞卖数≥3、NR相似品数≥3</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 历史数据分析：按三级分类、广告类型（SP/SB/SD等）、广告形式（BROAD/PHRASE等）、流量分层、ST进行数据表现打标</li><li>② 前置否定：三级分类黑名单（ACOS）</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-12" data-step="12" data-title="开售发布">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">12</div>
+    <div class="phase">操盘期</div>
+    <h2>开售发布</h2>
+    <div class="purpose">发通知</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 开售发布通知</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>发布</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-12-1" target="_blank" rel="noopener"><span>开售简报模板：要求群组、要求内容</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 开售发布通知：群确定（组群/BU群/大群）</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-13" data-step="13" data-title="单品复盘">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">13</div>
+    <div class="phase">操盘期</div>
+    <h2>单品复盘</h2>
+    <div class="purpose">做复盘</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 价促营库销</li><li>② 操盘方向</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 库存数据</li><li>② 价促营库销整合数据</li><li>③ 广告细节数据</li><li>④ 诉求方向</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>分析</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-13-1" target="_blank" rel="noopener"><span>大宽表数据看板：明确操盘方向</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-13-2" target="_blank" rel="noopener"><span>日销库存更新表</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-13-3" target="_blank" rel="noopener"><span>业务数据路径：周度、月度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-13-4" target="_blank" rel="noopener"><span>营销数据路径：周度、月度；最小到ST维度</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 价促营库销</li><li>② 运营方向：促营提拉规划/选1</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 库存数据</li><li>② 价促营库销整合数据：增促/增营/双增、降促/降营/双降</li><li>③ 广告细节数据</li><li>④ 诉求方向：降本、扩充、部分SKU淘汰、改造、品质</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-14" data-step="14" data-title="营销操盘">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">14</div>
+    <div class="phase">操盘期</div>
+    <h2>营销操盘</h2>
+    <div class="purpose">做调整</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 初期目标</li><li>② 中期目标</li><li>③ 后期目标</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 大数监控</li><li>② 表现细节</li><li>③ 广告框架</li><li>④ 特殊案例特殊支持</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>实操</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-14-1" target="_blank" rel="noopener"><span>营销打法案例：累积</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-14-2" target="_blank" rel="noopener"><span>营销操作SOP：迭代</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-14-3" target="_blank" rel="noopener"><span>营销日常数据路径：负责人、群组、播报内容、合作机制</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 监控：三级分类+LISTING、费比等关键指标管理（日播报）；提醒增花/指标异常</li><li>② 细节：CAM、ASIN、ST等维度关键指标管理（周播报）</li><li>③ 框架：广告类型、广告形式、计价形式等关键指标管理（周播报）</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-15" data-step="15" data-title="促销操盘">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">15</div>
+    <div class="phase">操盘期</div>
+    <h2>促销操盘</h2>
+    <div class="purpose">报促销</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 活动提报</li><li>② 活动审核</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 活动分析</li><li>② 活动规则</li><li>③ 活动排布</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>实操</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-15-1" target="_blank" rel="noopener"><span>促销打法案例：累积</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-15-2" target="_blank" rel="noopener"><span>促销操作SOP：迭代</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-15-3" target="_blank" rel="noopener"><span>促销数据路径：周度、月度；最小到SKU维度</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 活动提报</li><li>② 活动审核：销售→组长→部长→CS</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-16" data-step="16" data-title="日常监控">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">16</div>
+    <div class="phase">操盘期</div>
+    <h2>日常监控</h2>
+    <div class="purpose">做监控</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 看前台</li><li>② 看后台</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 日推送监控模板</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>监控</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-16-1" target="_blank" rel="noopener"><span>异常自检SOP：累积（看前台/看后台）</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 看前台：购物车（丢购/跟卖）、价格（异常/比价）、评分评论数、首页差评、高退货标签、时效、库存推送、VC异常、活动标签、坑位</li><li>② 看后台：营销花费、营销表现、活动报错、销量</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-17" data-step="17" data-title="竞卖监控">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">17</div>
+    <div class="phase">操盘期</div>
+    <h2>竞卖监控</h2>
+    <div class="purpose">做监控</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 看BSR</li><li>② 看NR</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 日推送监控模板</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>监控</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>N</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-17-1" target="_blank" rel="noopener"><span>竞卖操作分析SOP：看站内/看站外</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-17-2" target="_blank" rel="noopener"><span>关键榜单波动监控表：BI报表、波动指标</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 看BSR：看直竞（价坑布局时效、站外、细节改动）、看上升品（价坑布局时效、细节改动）</li><li>② 看NR：看NR3内（价坑布局时效、站外、细节改动）</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-18" data-step="18" data-title="项目复盘">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">18</div>
+    <div class="phase">操盘期</div>
+    <h2>项目复盘</h2>
+    <div class="purpose">做分析</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 单品复盘</li><li>② 测试项目</li><li>③ 业绩盘点</li><li>④ 异常诉求盘点</li><li>⑤ 项目总结</li><li>⑥ 组/BU/美线会议</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 业绩数据</li><li>② 诉求方向</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS,SPM,BUL</span></div>
+      <div><b>角色要求</b><span>分析</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-18-1" target="_blank" rel="noopener"><span>业务数据储存路径：周度、月度；最小到最早SKU维度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-18-2" target="_blank" rel="noopener"><span>营销数据路径：周度、月度；最小到ST维度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-18-3" target="_blank" rel="noopener"><span>促销数据路径：周度、月度；最小到SKU维度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-18-4" target="_blank" rel="noopener"><span>OKR项目复盘模板</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 单品：价促营库销、方向（重推/优化/下市））、诉求（降本/扩充）</li><li>② 测试项目：测试汇报（营销方式/AB）</li><li>③ 业绩盘点：目标达成、财务数据（数据走向/指标优化）</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 业务数据：三级分类、LISTING、SKU</li><li>② 诉求方向：降本、扩充、淘汰、改造、品质</li><li>③ 营销数据：三级分类、LISTING、ASIN；大数、广告类型、广告形式、ST定点复盘</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-19" data-step="19" data-title="市场复盘">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">19</div>
+    <div class="phase">操盘期</div>
+    <h2>市场复盘</h2>
+    <div class="purpose">做分析</div>
+    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 市容市占</li><li>② 上升下降</li><li>③ 奇点变化</li><li>④ 组/BU/美线会议</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 市场数据</li><li>② 奇点数据</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>分析</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-19-1" target="_blank" rel="noopener"><span>市容市占数据储存路径 ：月度；最小到ITK维度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-19-2" target="_blank" rel="noopener"><span>市场奇点数据储存路径 ：月度；最小到ASIN维度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-19-3" target="_blank" rel="noopener"><span>销售市场分析模板</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>② 上升/下降：品牌、竞品、异动、动作</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 市场数据：大数、市占、竞卖动向</li><li>② 奇点数据：种类、变化</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-20" data-step="20" data-title="预测盘点">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">20</div>
+    <div class="phase">操盘期</div>
+    <h2>预测盘点</h2>
+    <div class="purpose">做分析</div>
+    <div class="standard-box"><b>过关标准</b><span>美线认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 项目大数</li><li>② LISTING大数</li><li>③ 单SKU复盘</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 实销实坑更新</li><li>② 品类坑位更新</li><li>③ 预测评审</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS</span></div>
+      <div><b>角色要求</b><span>分析</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-20-1" target="_blank" rel="noopener"><span>周度预测达成盘点：数据晾晒；最小到最早SKU维度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-20-2" target="_blank" rel="noopener"><span>月度预测达成盘点：数据晾晒；最小到最早SKU维度</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-20-3" target="_blank" rel="noopener"><span>月度预测评审储存路径：月度；调整方向</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-20-4" target="_blank" rel="noopener"><span>预测调整SOP：什么指标条件如何调整、包含库存不足</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <ul class="detail-list"><li>① 项目大数：淡旺季系数、月度环比、大促翻倍（周度）</li><li>② LISTING大数：月度坑位目标、月度坑销</li><li>③ 单SKU复盘：实际SKU贡献比例、以库定销（包含产能/淘汰）</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <ul class="detail-list"><li>① 实销实坑 &amp; 品类坑位联动：同比、环比、差异</li><li>计划</li><li>② 预测评审：建议下降/上升</li></ul>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-21" data-step="21" data-title="产品下市">
+  <div class="stage-index" style="--stage-color:#08746f">
+    <div class="num">21</div>
+    <div class="phase">操盘期</div>
+    <h2>产品下市</h2>
+    <div class="purpose">做分析</div>
+    <div class="standard-box"><b>过关标准</b><span>美线认可过关</span></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 消耗手段盘点</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 清仓财务数据模拟</li><li>② 溢出库存分销</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>PM, BUS,SPM,BUL</span></div>
+      <div><b>角色要求</b><span>分析</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y：文字</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-21-1" target="_blank" rel="noopener"><span>产品下市SOP：标准、会议、SOP</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-21-2" target="_blank" rel="noopener"><span>清仓手段SOP：有哪些方式、怎么做</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-21-3" target="_blank" rel="noopener"><span>溢出库存三方分销SOP</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-21-4" target="_blank" rel="noopener"><span>财务清仓数据模拟储存路径：月度；最早到最早SKU维度</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+  </main>
+</div>
+<nav class="float-nav" aria-label="阶段快速导航"><div class="float-nav-inner"><a href="#step-1"><b>01</b><span>业务认知</span></a><a href="#step-2"><b>02</b><span>品类规划</span></a><a href="#step-3"><b>03</b><span>新品CD</span></a><a href="#step-4"><b>04</b><span>新品ND</span></a><a href="#step-5"><b>05</b><span>图片验收</span></a><a href="#step-6"><b>06</b><span>AI文案</span></a><a href="#step-7"><b>07</b><span>新品上架</span></a><a href="#step-8"><b>08</b><span>单子构建</span></a><a href="#step-9"><b>09</b><span>单子关联</span></a><a href="#step-10"><b>10</b><span>官媒发布</span></a><a href="#step-11"><b>11</b><span>营销搭建</span></a><a href="#step-12"><b>12</b><span>开售发布</span></a><a href="#step-13"><b>13</b><span>单品复盘</span></a><a href="#step-14"><b>14</b><span>营销操盘</span></a><a href="#step-15"><b>15</b><span>促销操盘</span></a><a href="#step-16"><b>16</b><span>日常监控</span></a><a href="#step-17"><b>17</b><span>竞卖监控</span></a><a href="#step-18"><b>18</b><span>项目复盘</span></a><a href="#step-19"><b>19</b><span>市场复盘</span></a><a href="#step-20"><b>20</b><span>预测盘点</span></a><a href="#step-21"><b>21</b><span>产品下市</span></a></div></nav>
+<script>
+(function(){
+  const cards=[...document.querySelectorAll('.stage-card')];
+  const navs=[...document.querySelectorAll('.float-nav a')];
+  document.body.classList.add('nav-visible');
+  navs.forEach(a=>{
+    a.addEventListener('mouseenter',()=>{
+      const id=a.getAttribute('href');
+      const card=document.querySelector(id);
+      if(card) card.classList.add('nav-peek');
+    });
+    a.addEventListener('mouseleave',()=>cards.forEach(c=>c.classList.remove('nav-peek')));
+  });
+})();
+</script>
+</body>
+</html>
