@@ -39,6 +39,16 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
 @media(max-width:1100px){body{padding-top:0}.hero-top{position:static;transform:none;width:auto}.hero,.column-head{position:static}.column-head{display:none}.stage-card{grid-template-columns:1fr;scroll-margin-top:16px}.stage-index{min-height:auto}.float-nav-inner{flex-direction:column;max-height:200px;overflow:auto}.nav-group{flex-direction:row;flex:none;gap:4px;padding:5px 6px}.nav-group-label{padding:4px 8px;font-size:11px}.nav-group-box{flex:1;padding:4px}.float-nav a{height:34px;min-width:42px;font-size:8px}.float-nav a:hover{transform:scale(1.08)}}
 .stage-card.nav-peek{transform:scale(1.018);box-shadow:var(--shadow-strong);border-color:#9db7da;z-index:9;position:relative}
 
+.promo-activity-name{transition:font-size .15s ease, overflow .15s ease, background .15s ease, box-shadow .15s ease, position .15s ease}
+.promo-activity-name:hover{font-size:13px!important;overflow:visible!important;white-space:normal!important;position:relative;z-index:20;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18);border-radius:6px;border-color:#9db7da!important;}
+.promo-date-cell{padding:0!important;}
+.promo-date-cell>span{display:block!important;width:100%!important;box-sizing:border-box!important;border-radius:0!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+
+.nav-item-wrap{display:flex;flex-direction:column;align-items:center;gap:2px}
+.nav-stock-tag{font-size:7px;color:#a8b8d0;border:1px dashed rgba(168,184,208,.5);border-radius:5px;padding:1px 3px;white-space:nowrap;background:rgba(255,255,255,.06);text-align:center;line-height:1.3;max-width:60px;overflow:hidden;text-overflow:ellipsis}
+
+
+
 .hero-top{position:fixed;left:50%;top:10px;transform:translateX(-50%);width:min(1824px,calc(100vw - 56px));display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:16px;align-items:center;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(18px);border:1px solid #dbe3ef;border-radius:20px;padding:10px 16px;box-shadow:0 12px 38px rgba(15,23,42,.12);}
 .hero-title-block{min-width:0}.hero-title-block .eyebrow{margin-bottom:3px;font-size:10px}.hero-title-block .subline{margin-top:5px;font-size:12px}.hero-title-block .legend{margin-top:6px;gap:5px}.hero-title-block .legend span{padding:3px 7px;font-size:10px}.hero-qr{margin:0;justify-self:end;text-align:center;border:1px solid #dce4ef;background:#fff;border-radius:14px;padding:6px;box-shadow:0 8px 20px rgba(15,23,42,.08);position:relative;z-index:70;cursor:zoom-in;transform-origin:top right;transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease}.hero-qr:hover,.hero-qr.hover-preview{transform:scale(2.35);box-shadow:0 28px 90px rgba(7,23,47,.32);border-color:#9db7da}.hero-qr img{width:72px;height:72px;object-fit:contain;display:block;border-radius:8px}.hero-qr small{display:block;margin-top:4px;color:#667085;font-size:10px;font-weight:800;line-height:1.15}
 .relation-section,.core-section{margin-top:18px;border:1px solid #dce4ef;background:linear-gradient(180deg,#fff,#f9fbff);border-radius:24px;padding:16px 18px;box-shadow:0 12px 30px rgba(15,23,42,.045)}.section-title{display:flex;align-items:center;gap:10px;margin:0 0 12px;color:#071529;font-size:18px;font-weight:950;letter-spacing:-.02em}.section-title::before{content:"";width:8px;height:20px;border-radius:999px;background:#276ef1;box-shadow:0 8px 18px rgba(39,110,241,.24)}
@@ -137,9 +147,9 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </tr></thead>
 <tbody>
   <tr><td rowspan="16" style="padding:6px 8px;border:1px solid #dbe5f2;text-align:center;font-weight:950;color:#276ef1;background:#f6f8fb;vertical-align:middle;">VM BD</td>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Back to Business Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Back to Business Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#276ef1;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/1/15起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#276ef1;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/1/15起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -153,10 +163,10 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">President Day Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">President Day Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/2/9起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/2/9起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -169,11 +179,11 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Off Cycle Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Off Cycle Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/2/26起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/2/26起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -185,11 +195,11 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Big Spring Sales Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Big Spring Sales Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#3b82f6;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/3/18起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#3b82f6;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/3/18起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -201,12 +211,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 1</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 1</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/4/4起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/4/4起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -217,12 +227,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 2</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 2</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#3b82f6;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/4/21起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#3b82f6;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/4/21起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -233,13 +243,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Memorial Day Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Memorial Day Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">21</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/5/8起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/5/8起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -249,14 +259,14 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/5/29起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/5/29起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -265,14 +275,14 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Prime Day Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Prime Day Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">15</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/6/12起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/6/12起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -281,7 +291,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 1</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 1</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -289,7 +299,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/6/30起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/6/30起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -297,7 +307,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 2</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal 2</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -305,7 +315,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#3b82f6;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/7/16起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#3b82f6;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/7/16起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -313,23 +323,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off to College Deal</td>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/7/31起</span></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-  </tr>
-  <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off to College Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -338,14 +332,14 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/8/14起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/7/31起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">labor Day Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -354,14 +348,14 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/8/14起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/8/28起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">labor Day Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -371,13 +365,29 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/9/11起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#1d4ed8;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/8/28起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Prime Big Dey Deal</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">off Cycle Deal</td>
+    <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#2563eb;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/9/11起</span></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+    <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
+  </tr>
+  <tr>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">Prime Big Dey Deal</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">14</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -388,16 +398,16 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/9/25起</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">2026/9/25起</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr><td rowspan="5" style="padding:6px 8px;border:1px solid #dbe5f2;text-align:center;font-weight:950;color:#08746f;background:#f0fdfa;vertical-align:middle;">区域大促</td>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">春促</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">春促</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">不定</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#08746f;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">3月</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#08746f;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">3月</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -409,13 +419,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">母亲节</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">母亲节</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">不定</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#0d9488;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">5月</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#0d9488;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">5月</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -425,14 +435,14 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">PrimeDay</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">PrimeDay</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">4天</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">6.23-6.26</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">6.23-6.26</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -441,7 +451,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">PrimeDay</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">PrimeDay</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">4天</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -452,12 +462,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">10.6-10.9</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#7c3aed;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">10.6-10.9</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
   <tr>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">黑五网一</td>
+    <td class="promo-activity-name" style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">黑五网一</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">7天</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -469,7 +479,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
-    <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#b42318;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">未定</span></td>
+    <td class="promo-date-cell" style="border:1px solid #dbe5f2;padding:0;text-align:center;height:20px;"><span style="display:block;background:#b42318;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">未定</span></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
   </tr>
 </tbody></table>
@@ -644,7 +654,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   
     <div class="sub-panel" style="margin-top:11px;padding-top:10px;border-top:1px dashed #d9e2ef">
       <div style="font-size:16px;font-weight:1000;color:#071529;margin-bottom:6px;padding:3px 9px;border-radius:999px;background:#eef5ff;border:1px solid #cfe0f7;display:inline-flex;align-items:center;">销售交付物</div>
-      <div style="font-size:13px;color:#344054;line-height:1.6;">✅ IPMS<br>✅ 初始NDCP推演表</div>
+      <div style="font-size:13px;color:#344054;line-height:1.6;">✅ IPMS<br>✅ 初始NDCP推演表<br>✅ 竞品调研</div>
     </div>
   </section>
 
@@ -1288,6 +1298,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <span class="checklist-item">价格正常</span>
     <span class="checklist-item">时效正常</span>
     <span class="checklist-item">促销折扣正常</span>
+    <span class="checklist-item">图文展示正常</span>
   </div>
   <div class="checklist-day">D2-D3</div>
   <div class="checklist-row">
@@ -1767,7 +1778,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
 </article>
   </main>
 </div>
-<nav class="float-nav" aria-label="阶段快速导航"><div class="float-nav-inner"><div class="nav-group" style="--group-color:#204f9c;flex:2"><div class="nav-group-label">筑基期</div><div class="nav-group-box"><a href="#step-1"><b>01</b><span>业务认知</span></a></div></div><div class="nav-group" style="--group-color:#7a4b12;flex:4"><div class="nav-group-label">掌旗期</div><div class="nav-group-box"><a href="#step-2"><b>02</b><span>品类规划</span></a><a href="#step-3"><b>03</b><span>新品CD</span></a><a href="#step-4"><b>04</b><span>新品ND</span></a></div></div><div class="nav-group" style="--group-color:#5b2c8a;flex:11"><div class="nav-group-label">准备期</div><div class="nav-group-box"><a href="#step-5"><b>05</b><span>风险管控</span></a><a href="#step-6"><b>06</b><span>图片验收</span></a><a href="#step-7"><b>07</b><span>AI文案</span></a><a href="#step-8"><b>08</b><span>新品上架</span></a><a href="#step-9"><b>09</b><span>详细上货</span></a><a href="#step-10"><b>10</b><span>单子关联</span></a><a href="#step-11"><b>11</b><span>官媒发布</span></a><a href="#step-12"><b>12</b><span>红人营销</span></a><a href="#step-13"><b>13</b><span>营销搭建</span></a><a href="#step-14"><b>14</b><span>开售发布</span></a></div></div><div class="nav-group" style="--group-color:#08746f;flex:10"><div class="nav-group-label">操盘期</div><div class="nav-group-box"><a href="#step-15"><b>15</b><span>单品复盘</span></a><a href="#step-16"><b>16</b><span>营销操盘</span></a><a href="#step-17"><b>17</b><span>促销操盘</span></a><a href="#step-18"><b>18</b><span>日常监控</span></a><a href="#step-19"><b>19</b><span>竞卖监控</span></a><a href="#step-20"><b>20</b><span>项目复盘</span></a><a href="#step-21"><b>21</b><span>市场复盘</span></a><a href="#step-22"><b>22</b><span>预测盘点</span></a><a href="#step-23"><b>23</b><span>产品下市</span></a></div></div></div></nav>
+<nav class="float-nav" aria-label="阶段快速导航"><div class="float-nav-inner"><div class="nav-group" style="--group-color:#204f9c;flex:2"><div class="nav-group-label">筑基期</div><div class="nav-group-box"><a href="#step-1"><b>01</b><span>业务认知</span></a></div></div><div class="nav-group" style="--group-color:#7a4b12;flex:4"><div class="nav-group-label">掌旗期</div><div class="nav-group-box"><a href="#step-2"><b>02</b><span>品类规划</span></a><a href="#step-3"><b>03</b><span>新品CD</span></a><a href="#step-4"><b>04</b><span>新品ND</span></a></div></div><div class="nav-group" style="--group-color:#5b2c8a;flex:11"><div class="nav-group-label">准备期</div><div class="nav-group-box"><div class="nav-item-wrap"><a href="#step-5"><b>05</b><span>风险管控</span></a><div class="nav-stock-tag">新品在途</div></div><div class="nav-item-wrap"><a href="#step-6"><b>06</b><span>图片验收</span></a><div class="nav-stock-tag">到仓前2周</div></div><div class="nav-item-wrap"><a href="#step-7"><b>07</b><span>AI文案</span></a><div class="nav-stock-tag">到仓前2周</div></div><div class="nav-item-wrap"><a href="#step-8"><b>08</b><span>新品上架</span></a><div class="nav-stock-tag">至少单仓到货</div></div><div class="nav-item-wrap"><a href="#step-9"><b>09</b><span>详细上货</span></a><div class="nav-stock-tag">至少单仓到货</div></div><div class="nav-item-wrap"><a href="#step-10"><b>10</b><span>单子关联</span></a><div class="nav-stock-tag">至少单仓到货</div></div><div class="nav-item-wrap"><a href="#step-11"><b>11</b><span>官媒发布</span></a><div class="nav-stock-tag">至少两仓到货</div></div><div class="nav-item-wrap"><a href="#step-12"><b>12</b><span>红人营销</span></a><div class="nav-stock-tag">至少两仓到货</div></div><div class="nav-item-wrap"><a href="#step-13"><b>13</b><span>营销搭建</span></a><div class="nav-stock-tag">至少两仓到货</div></div><div class="nav-item-wrap"><a href="#step-14"><b>14</b><span>开售发布</span></a><div class="nav-stock-tag">至少两仓到货</div></div></div></div><div class="nav-group" style="--group-color:#08746f;flex:10"><div class="nav-group-label">操盘期</div><div class="nav-group-box"><a href="#step-15"><b>15</b><span>单品复盘</span></a><a href="#step-16"><b>16</b><span>营销操盘</span></a><a href="#step-17"><b>17</b><span>促销操盘</span></a><a href="#step-18"><b>18</b><span>日常监控</span></a><a href="#step-19"><b>19</b><span>竞卖监控</span></a><a href="#step-20"><b>20</b><span>项目复盘</span></a><a href="#step-21"><b>21</b><span>市场复盘</span></a><a href="#step-22"><b>22</b><span>预测盘点</span></a><a href="#step-23"><b>23</b><span>产品下市</span></a></div></div></div></nav>
 <script>
 (function(){
   var diagram=document.getElementById('layoutDiagram');
