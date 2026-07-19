@@ -51,7 +51,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 .core-card .core-link{position:relative;z-index:5;pointer-events:auto;cursor:pointer}
 .standard-flow{margin-top:4px;display:flex;align-items:center;gap:2px;flex-wrap:wrap;transform-origin:left center;transition:transform .25s ease;z-index:1;position:relative;cursor:zoom-in;max-width:100%;overflow:hidden}
-.standard-flow:hover{transform:scale(1.8);z-index:100;background:#fff;border-radius:10px;padding:6px 8px;box-shadow:0 16px 48px rgba(15,23,42,.18)}
+.standard-flow:hover{transform:scale(2.2);z-index:100;background:#fff;border-radius:10px;padding:6px 8px;box-shadow:0 16px 48px rgba(15,23,42,.18)}
 .flow-step{padding:1px 4px;border:1px solid #c8d4e6;border-radius:5px;font-size:7.5px;font-weight:600;background:#f0f4fa;color:#344054;white-space:nowrap;line-height:1.2}
 .flow-arrow-s{color:#8595ac;font-size:8px;font-weight:900}
 .checklist-section{margin:14px 0;border:2px solid #08746f;border-radius:20px;padding:16px 20px;background:linear-gradient(135deg,#f0fdfa,#fff);scroll-margin-top:206px}
@@ -394,7 +394,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </tr>
   <tr><td rowspan="5" style="padding:6px 8px;border:1px solid #dbe5f2;text-align:center;font-weight:950;color:#08746f;background:#f0fdfa;vertical-align:middle;">区域大促</td>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">春促</td>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">7天内</td>
+    <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">不定</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #dbe5f2;padding:3px 2px;text-align:center;height:20px;"><span style="display:inline-block;background:#08746f;color:#fff;font-size:9px;font-weight:800;padding:2px 4px;border-radius:4px;white-space:nowrap;">3月</span></td>
@@ -410,7 +410,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </tr>
   <tr>
     <td style="padding:3px 4px;border:1px solid #dbe5f2;font-weight:800;color:#344054;font-size:8px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:90px;">母亲节</td>
-    <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">7天内</td>
+    <td style="padding:3px 4px;border:1px solid #dbe5f2;text-align:center;font-weight:700;color:#475467;height:20px;">不定</td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
     <td style="border:1px solid #edf0f5;background:#fafbfc;height:20px;"></td>
@@ -493,6 +493,9 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
         <div class="core-card secondary" style="grid-column:auto"><b>榜单巡检</b><span style="display:block;font-size:11px;color:#667085;margin-top:2px">看市场机会</span><a class="core-link" href="https://songmicshome.feishu.cn/wiki/FckSwEFgxizJHdk60mHcx84Fn9f?table=tbl1jpO54NC0rxTQ&amp;view=vewEcBOGTR" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
         <div class="core-card secondary" style="grid-column:auto"><b>销坑表</b><span style="display:block;font-size:11px;color:#667085;margin-top:2px">对齐坑销</span><a class="core-link" href="https://songmicshome.feishu.cn/sheets/ULWLsuppOhHq99t8aFvcwP68nYg?sheet=rTPf87" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
         <div class="core-card secondary" style="grid-column:auto"><b>评分管控</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/VfBpwNessiZDkFk7EqRcBifcnKc?sheet=3CW3td" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>线下路径</b><span style="display:block;font-size:11px;color:#667085;margin-top:2px">文件服务器路径</span><div style="margin-top:4px;position:relative;">
+          <code style="display:inline-block;font-size:9px;color:#475467;background:#f0f4fa;border:1px solid #dbe5f2;border-radius:6px;padding:3px 8px;max-width:100%;word-break:break-all;cursor:pointer;" onclick="navigator.clipboard.writeText(this.textContent.replace(/\n/g,''));this.style.background='#d0e6ff';setTimeout(()=>this.style.background='#f0f4fa',800);this.setAttribute('title','已复制!');" title="点击复制">\\192.168.1.141\产品运营\运营组\美线文件夹\2025年</code>
+        </div></div>
       </div>
     </section>
     <section class="core-section" aria-labelledby="sales-ops-title">
@@ -508,6 +511,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
         <div class="core-card secondary" style="grid-column:auto"><b>红人视频</b><a class="core-link" href="https://songmicshome.feishu.cn/sheets/shtcn1LegYkE2Fbqj1YGJMGGhTe?disposable_login_token=eyJ1c2VyX2lkIjoiNzEwMzMzMDYxNTY2MzIzMDk4MCIsImRldmljZV9sb2dpbl9pZCI6IjcxMDMzNTA3NDgyNDY3MzY5MDAiLCJ0aW1lc3RhbXAiOjE3ODQwMTIwNjAsInVuaXQiOiJldV9uYyIsInB3ZF9sZXNzX2xvZ2luX2F1dGgiOiIxIiwidmVyc2lvbiI6InYzIiwidGVuYW50X2JyYW5kIjoiZmVpc2h1IiwicGtnX2JyYW5kIjoiRmVpc2h1IiwiY2xpZW50X3NjaGVtYSI6IngtZmVpc2h1In0%3D.0c7a3b92fc2fda6cda24ead912eecc9a4f3289fc417a3eaa9aa6449192bac409" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
         <div class="core-card secondary" style="grid-column:auto"><b>SC转VC</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/MDhxwZNXCiRvrakPzHDcf4evnJc" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
         <div class="core-card secondary" style="grid-column:auto"><b>广告抑制</b><a class="core-link" href="https://songmicshome.feishu.cn/wiki/XnuBw3oQcizwFrk8lTWca3WpnCh?sheet=4hj5EL" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
+        <div class="core-card secondary" style="grid-column:auto"><b>美国插件</b><a class="core-link" href="https://songmicshome.feishu.cn/sheets/FOQuss2n6hCjgvtGkWXcX8nEn7N?sheet=vIHHj0" target="_blank" rel="noopener noreferrer">点击飞书文档</a></div>
       </div>
     </section>
   </header>
@@ -520,7 +524,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">筑基期</div>
     <h2>业务认知</h2>
     <div class="purpose">跟着看</div>
-    <div class="standard-box"><b>过关标准</b><span>转正成功</span><div class="standard-flow"><span class="flow-step">入职</span><span class="flow-arrow-s">→</span><span class="flow-step">集训</span><span class="flow-arrow-s">→</span><span class="flow-step">导师带教</span><span class="flow-arrow-s">→</span><span class="flow-step">转正成功</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>转正成功</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">入职</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">集训</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">导师带教</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">转正成功</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -567,7 +571,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">掌旗期</div>
     <h2>品类规划</h2>
     <div class="purpose">跟着看</div>
-    <div class="standard-box"><b>过关标准</b><span>公司审核通过</span><div class="standard-flow"><span class="flow-step">PM</span><span class="flow-arrow-s">→</span><span class="flow-step">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step">公司审核</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">PM</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">公司审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -614,7 +618,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">掌旗期</div>
     <h2>新品CD</h2>
     <div class="purpose">做分析 | <span style="color:#b42318;font-weight:950;">无竞争力，终止立项</span></div>
-    <div class="standard-box"><b>过关标准</b><span>公司审核通过，合规，立项</span><div class="standard-flow"><span class="flow-step">PM</span><span class="flow-arrow-s">→</span><span class="flow-step">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step">公司审核</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过，合规，立项</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">PM</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">公司审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -666,7 +670,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">掌旗期</div>
     <h2>新品ND</h2>
     <div class="purpose">做推演</div>
-    <div class="standard-box"><b>过关标准</b><span>公司审核通过，合规，订货</span><div class="standard-flow"><span class="flow-step">PM</span><span class="flow-arrow-s">→</span><span class="flow-step">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step">公司审核</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过，合规，订货</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">PM</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">公司审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -719,7 +723,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>风险管控</h2>
     <div class="purpose">做监控</div>
-    <div class="standard-box"><b>过关标准</b><span>市场需求、竞卖动作、市场政策无较大变动</span><div class="standard-flow"><span class="flow-step">监控政策</span><span class="flow-arrow-s">→</span><span class="flow-step">监控固定成本变化</span><span class="flow-arrow-s">→</span><span class="flow-step">监控市场需求</span><span class="flow-arrow-s">→</span><span class="flow-step">监控竞卖动作</span><span class="flow-arrow-s">→</span><span class="flow-step">监控交付政策</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>市场需求、竞卖动作、市场政策无较大变动</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">监控政策</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">监控固定成本变化</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">监控市场需求</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">监控竞卖动作</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">监控交付政策</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -767,7 +771,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>图片验收</h2>
     <div class="purpose">做验收</div>
-    <div class="standard-box"><b>过关标准</b><span>销售审核通过</span><div class="standard-flow"><span class="flow-step">BUS/PM</span><span class="flow-arrow-s">→</span><span class="flow-step">卖点沟通会</span><span class="flow-arrow-s">→</span><span class="flow-step">设计沟通会</span><span class="flow-arrow-s">→</span><span class="flow-step">主案交付</span><span class="flow-arrow-s">→</span><span class="flow-step">销售验图</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>销售审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">BUS/PM</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">卖点沟通会</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">设计沟通会</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">主案交付</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售验图</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -865,7 +869,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>AI文案</h2>
     <div class="purpose">做纠正</div>
-    <div class="standard-box"><b>过关标准</b><span>销售审核通过</span><div class="standard-flow"><span class="flow-step">AI初版</span><span class="flow-arrow-s">→</span><span class="flow-step">销售修改</span><span class="flow-arrow-s">→</span><span class="flow-step">文案确定</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>销售审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">AI初版</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售修改</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">文案确定</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -917,7 +921,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>新品上架</h2>
     <div class="purpose">出报价</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">单仓到货</span><span class="flow-arrow-s">→</span><span class="flow-step">销售报价</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span><span class="flow-arrow-s">→</span><span class="flow-step">运营创建ASIN&amp;OFFER</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">单仓到货</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售报价</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">组长审核</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">运营创建ASIN&amp;OFFER</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -969,7 +973,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>详细上货</h2>
     <div class="purpose">提诉求</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售捆绑僵尸/释放VINE/不捆绑僵尸</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售捆绑僵尸/释放VINE/不捆绑僵尸</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">组长审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1021,7 +1025,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>单子关联</h2>
     <div class="purpose">提诉求</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售捆绑NM/A+外链</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售捆绑NM/A+外链</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">组长审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1073,7 +1077,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>官媒发布</h2>
     <div class="purpose">提诉求</div>
-    <div class="standard-box"><b>过关标准</b><span>待定</span><div class="standard-flow"><span class="flow-step">待定</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>待定</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">待定</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1120,7 +1124,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>红人营销</h2>
     <div class="purpose">提诉求</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售提报</span><span class="flow-arrow-s">→</span><span class="flow-step">红人视频/站内CC/站外红人合作</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售提报</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">红人视频/站内CC/站外红人合作</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">组长审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1172,7 +1176,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>营销搭建</h2>
     <div class="purpose">出框架</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售搭建营销框架</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核通过</span><span class="flow-arrow-s">→</span><span class="flow-step">销售后台创建</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售搭建营销框架</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">组长审核通过</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售后台创建</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1224,7 +1228,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">准备期</div>
     <h2>开售发布</h2>
     <div class="purpose">发通知</div>
-    <div class="standard-box"><b>过关标准</b><span>自行发布</span><div class="standard-flow"><span class="flow-step">运营详细上货</span><span class="flow-arrow-s">→</span><span class="flow-step">销售做好准备工作</span><span class="flow-arrow-s">→</span><span class="flow-step">前台开售购物车正常</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>自行发布</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">运营详细上货</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售做好准备工作</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">前台开售购物车正常</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1299,7 +1303,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>单品复盘</h2>
     <div class="purpose">做复盘</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">库存现状</span><span class="flow-arrow-s">→</span><span class="flow-step">销售确定销售方向 提/降销速</span><span class="flow-arrow-s">→</span><span class="flow-step">销售排布价促营</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">库存现状</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售确定销售方向 提/降销速</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售排布价促营</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1351,7 +1355,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>营销操盘</h2>
     <div class="purpose">做调整</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step">确定广告费比目标</span><span class="flow-arrow-s">→</span><span class="flow-step">销售操盘营销</span><span class="flow-arrow-s">→</span><span class="flow-step">先达标、再优化</span><span class="flow-arrow-s">→</span><span class="flow-step">无效、低效依次优化</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">确定广告费比目标</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售操盘营销</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">先达标、再优化</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">无效、低效依次优化</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1403,7 +1407,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>促销操盘</h2>
     <div class="purpose">促销预排</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step">确定促销节奏</span><span class="flow-arrow-s">→</span><span class="flow-step">销售操盘促销</span><span class="flow-arrow-s">→</span><span class="flow-step">先跟从SOP、再自定义 | 14+14、不同组合</span><span class="flow-arrow-s">→</span><span class="flow-step">注意增量增销额</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">确定促销节奏</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售操盘促销</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">先跟从SOP、再自定义 | 14+14、不同组合</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">注意增量增销额</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1455,7 +1459,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>日常监控</h2>
     <div class="purpose">做监控 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每天</span></div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step">销量达标 | 调整价促营</span><span class="flow-arrow-s">→</span><span class="flow-step">链接正常 | 反馈处理异常</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销量达标 | 调整价促营</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">链接正常 | 反馈处理异常</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1507,7 +1511,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>竞卖监控</h2>
     <div class="purpose">做监控 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每天</span></div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定BSR/NR竞卖趋势</span><span class="flow-arrow-s">→</span><span class="flow-step">上升竞卖/下降竞卖</span><span class="flow-arrow-s">→</span><span class="flow-step">研究操作/新增新品诉求/应对反击</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">确定BSR/NR竞卖趋势</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">上升竞卖/下降竞卖</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">研究操作/新增新品诉求/应对反击</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1559,7 +1563,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>项目复盘</h2>
     <div class="purpose">做分析 | <span style="background:#08746f;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每月1次</span></div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">项目复盘</span><span class="flow-arrow-s">→</span><span class="flow-step">大数进度盘点 | 进度 &amp; 销毛额</span><span class="flow-arrow-s">→</span><span class="flow-step">拆分LISTING+SKU复盘 | 月度</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">项目复盘</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">大数进度盘点 | 进度 &amp; 销毛额</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">拆分LISTING+SKU复盘 | 月度</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1611,7 +1615,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>市场复盘</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">市场复盘</span><span class="flow-arrow-s">→</span><span class="flow-step">大数进度盘点 | 趋势 &amp; 市占位次</span><span class="flow-arrow-s">→</span><span class="flow-step">拆分品牌+主竞卖复盘 | 月度</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">市场复盘</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">大数进度盘点 | 趋势 &amp; 市占位次</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">拆分品牌+主竞卖复盘 | 月度</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1663,7 +1667,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>预测盘点</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">计划BP盘点</span><span class="flow-arrow-s">→</span><span class="flow-step">组长确定调整方向</span><span class="flow-arrow-s">→</span><span class="flow-step">组内沟通</span><span class="flow-arrow-s">→</span><span class="flow-step">销售调整预测</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">计划BP盘点</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">组长确定调整方向</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">组内沟通</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售调整预测</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1715,7 +1719,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">操盘期</div>
     <h2>产品下市</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>公司审核通过</span><div class="standard-flow"><span class="flow-step">销售发起诉求</span><span class="flow-arrow-s">→</span><span class="flow-step">组长复盘确定</span><span class="flow-arrow-s">→</span><span class="flow-step">联动BU&amp;美线确定下市</span><span class="flow-arrow-s">→</span><span class="flow-step">计划停止下单</span><span class="flow-arrow-s">→</span><span class="flow-step">销售以库定销修改预测</span></div></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售发起诉求</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">组长复盘确定</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">联动BU&amp;美线确定下市</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">计划停止下单</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售以库定销修改预测</span></div></div>
   </div>
 
   <section class="panel panel-actions">
