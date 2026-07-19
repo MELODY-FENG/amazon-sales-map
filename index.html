@@ -801,7 +801,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="panel-kicker">指导支撑</div>
     <h3>输出要求</h3>
     <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-5-1" target="_blank" rel="noopener"><span>图片诉求模板：</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/sales-map-5-2" target="_blank" rel="noopener"><span>视觉美感SOP</span><em>飞书链接</em></a></div>
-    <div style="margin-top:10px;border:1px solid #e1e8f2;border-radius:10px;padding:6px 7px;background:#fafbfc;cursor:zoom-in;transition:transform .3s ease,box-shadow .3s ease;transform-origin:left center;position:relative;" onmouseenter="this.style.transform='scale(3.5)';this.style.zIndex='9999';this.style.position='relative';this.style.overflow='visible';this.style.boxShadow='0 20px 60px rgba(15,23,42,.25)';this.style.background='#fff';this.style.borderRadius='10px';this.style.padding='10px 12px';" onmouseleave="this.style.transform='';this.style.zIndex='';this.style.position='relative';this.style.overflow='visible';this.style.boxShadow='';this.style.background='#fafbfc';this.style.borderRadius='10px';this.style.padding='6px 7px';">
+    <div id="layoutDiagram" style="margin-top:10px;border:1px solid #e1e8f2;border-radius:10px;padding:6px 7px;background:#fafbfc;cursor:zoom-in;transition:box-shadow .3s ease;position:relative;">
     <div style="font-size:7px;color:#667085;font-weight:700;margin-bottom:3px;">标题：75字符 | 含标点</div>
     <div style="display:flex;gap:2px;margin-bottom:2px;align-items:center;">
       <div style="font-size:6px;color:#667085;font-weight:700;width:20px;flex-shrink:0;">主图</div>
@@ -1763,6 +1763,32 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </main>
 </div>
 <nav class="float-nav" aria-label="阶段快速导航"><div class="float-nav-inner"><div class="nav-group" style="--group-color:#204f9c;flex:2"><div class="nav-group-label">筑基期</div><div class="nav-group-box"><a href="#step-1"><b>01</b><span>业务认知</span></a></div></div><div class="nav-group" style="--group-color:#7a4b12;flex:4"><div class="nav-group-label">掌旗期</div><div class="nav-group-box"><a href="#step-2"><b>02</b><span>品类规划</span></a><a href="#step-3"><b>03</b><span>新品CD</span></a><a href="#step-4"><b>04</b><span>新品ND</span></a></div></div><div class="nav-group" style="--group-color:#5b2c8a;flex:11"><div class="nav-group-label">准备期</div><div class="nav-group-box"><a href="#step-4b"><b>R</b><span>风险管控</span></a><a href="#step-5"><b>05</b><span>图片验收</span></a><a href="#step-6"><b>06</b><span>AI文案</span></a><a href="#step-7"><b>07</b><span>新品上架</span></a><a href="#step-8"><b>08</b><span>详细上货</span></a><a href="#step-9"><b>09</b><span>单子关联</span></a><a href="#step-10"><b>10</b><span>官媒发布</span></a><a href="#step-11"><b>11</b><span>红人营销</span></a><a href="#step-12"><b>12</b><span>营销搭建</span></a><a href="#step-13"><b>13</b><span>开售发布</span></a></div></div><div class="nav-group" style="--group-color:#08746f;flex:10"><div class="nav-group-label">操盘期</div><div class="nav-group-box"><a href="#step-14"><b>14</b><span>单品复盘</span></a><a href="#step-15"><b>15</b><span>营销操盘</span></a><a href="#step-16"><b>16</b><span>促销操盘</span></a><a href="#step-17"><b>17</b><span>日常监控</span></a><a href="#step-18"><b>18</b><span>竞卖监控</span></a><a href="#step-19"><b>19</b><span>项目复盘</span></a><a href="#step-20"><b>20</b><span>市场复盘</span></a><a href="#step-21"><b>21</b><span>预测盘点</span></a><a href="#step-22"><b>22</b><span>产品下市</span></a></div></div></div></nav>
+<script>
+(function(){
+  var diagram=document.getElementById('layoutDiagram');
+  if(!diagram)return;
+  var overlay=null;
+  var removeTimer=null;
+  diagram.addEventListener('mouseenter',function(){
+    clearTimeout(removeTimer);
+    if(overlay)return;
+    overlay=document.createElement('div');
+    overlay.style.cssText='position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:99999;display:flex;align-items:center;justify-content:center;pointer-events:none;background:rgba(7,23,47,0.68);';
+    var clone=diagram.cloneNode(true);
+    clone.id='';
+    clone.removeAttribute('onmouseenter');
+    clone.removeAttribute('onmouseleave');
+    clone.style.cssText='background:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 30px 80px rgba(0,0,0,0.45);border:1px solid #d0dae8;transform:scale(3.2);transform-origin:center center;margin:0;';
+    overlay.appendChild(clone);
+    document.body.appendChild(overlay);
+  });
+  diagram.addEventListener('mouseleave',function(){
+    removeTimer=setTimeout(function(){
+      if(overlay){overlay.remove();overlay=null;}
+    },200);
+  });
+})();
+</script>
 <script>
 (function(){
   const cards=[...document.querySelectorAll('.stage-card')];
