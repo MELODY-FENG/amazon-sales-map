@@ -49,7 +49,17 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
 @media(max-width:1100px){.hero-top{grid-template-columns:1fr}.hero-qr{justify-self:start}.role-grid{grid-template-columns:1fr}.core-grid,.calendar-grid{grid-template-columns:1fr}.core-card.primary,.core-card.secondary{grid-column:auto}.process-flow{align-items:stretch}.flow-node{white-space:normal}.flow-arrow{display:none}}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
-.core-card .core-link{position:relative;z-index:5;pointer-events:auto;cursor:pointer}</style>
+.core-card .core-link{position:relative;z-index:5;pointer-events:auto;cursor:pointer}
+.standard-flow{margin-top:6px;display:flex;align-items:center;gap:3px;flex-wrap:wrap;transform-origin:left center;transition:transform .25s ease;z-index:1;position:relative;cursor:zoom-in}
+.standard-flow:hover{transform:scale(1.8);z-index:100;background:#fff;border-radius:10px;padding:6px 8px;box-shadow:0 16px 48px rgba(15,23,42,.18)}
+.flow-step{padding:3px 8px;border:1px solid #c8d4e6;border-radius:8px;font-size:10px;font-weight:700;background:#f0f4fa;color:#344054;white-space:nowrap}
+.flow-arrow-s{color:#8595ac;font-size:11px;font-weight:900}
+.checklist-section{margin:14px 0;border:2px solid #08746f;border-radius:20px;padding:16px 20px;background:linear-gradient(135deg,#f0fdfa,#fff);scroll-margin-top:206px}
+.checklist-title{font-size:18px;font-weight:950;color:#08746f;margin:0 0 10px;letter-spacing:-.02em}
+.checklist-day{font-size:13px;font-weight:950;color:#08746f;margin:8px 0 4px}
+.checklist-row{display:flex;gap:8px;flex-wrap:wrap}
+.checklist-item{display:inline-flex;align-items:center;padding:5px 10px;border:1px solid #b9ded8;border-radius:10px;font-size:12px;font-weight:700;background:#fff;color:#344054}
+</style>
 </head>
 <body>
 <div class="page">
@@ -59,7 +69,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
         <div class="eyebrow">Amazon Sales Business Map</div>
         <h1 style="color:#061329">美线客厅家具柜销售业务地图</h1>
         <div class="subline"><span>面向亚马逊销售全业务环节、内容、角色、标准</span></div>
-        <div class="legend"><span style="--stage-color:#204f9c;font-size:15px;padding:8px 14px">筑基期</span><span style="--stage-color:#7a4b12;font-size:15px;padding:8px 14px">掌旗期</span><span style="--stage-color:#08746f;font-size:15px;padding:8px 14px">操盘期</span></div>
+        <div class="legend"><span style="--stage-color:#204f9c;font-size:15px;padding:8px 14px">筑基期</span><span style="--stage-color:#7a4b12;font-size:15px;padding:8px 14px">掌旗期</span><span style="--stage-color:#5b2c8a;font-size:15px;padding:8px 14px">准备期</span><span style="--stage-color:#08746f;font-size:15px;padding:8px 14px">操盘期</span></div>
       </div>
       <figure class="hero-qr">
         <img src="data:image/jpeg;base64,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" alt="美线大群二维码" />
@@ -73,7 +83,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
       <div class="process-flow" aria-label="业务推进链路">
         <span class="flow-node">PM构思</span><span class="flow-arrow">→</span><span class="flow-node">BUS初筛</span><span class="flow-arrow">→</span><span class="flow-node">产销拉通</span><span class="flow-arrow">→</span><span class="flow-node strong">XDCP推进</span><span class="review-node"><span>组长评审</span><span>公司上会</span></span><span class="flow-arrow">→</span><span class="flow-node">新品上市</span><span class="flow-arrow">→</span><span class="flow-node">销售操盘</span><span class="flow-arrow">→</span><span class="flow-node">业务定点复盘</span><span class="flow-arrow">→</span><span class="flow-node">产品留存/下市</span>
       </div>
-      <div class="role-grid"><a class="role-card" href="https://example.feishu.cn/wiki/marketing-bp" target="_blank" rel="noopener"><b>营销BP</b><span>营销相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/planning-bp" target="_blank" rel="noopener"><b>计划BP</b><span>库存相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/team-leader" target="_blank" rel="noopener"><b>组长</b><span>所有业务支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/pm" target="_blank" rel="noopener"><b>PM</b><span>产品相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/vc" target="_blank" rel="noopener"><b>VC支持</b><span>促销相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/data-analysis" target="_blank" rel="noopener"><b>数分</b><span>数据相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://songmicshome.feishu.cn/wiki/OBSpw2HuoiX8xfkbFX8c3i6XnCh?sheet=P0Zykv&amp;disposable_login_token=eyJ1c2VyX2lkIjoiNzEwMzMzMDYxNTY2MzIzMDk4MCIsImRldmljZV9sb2dpbl9pZCI6IjcxMDMzNTA3NDgyNDY3MzY5MDAiLCJ0aW1lc3RhbXAiOjE3ODQwMTE3NjgsInVuaXQiOiJldV9uYyIsInB3ZF9sZXNzX2xvZ2luX2F1dGgiOiIxIiwidmVyc2lvbiI6InYzIiwidGVuYW50X2JyYW5kIjoiZmVpc2h1IiwicGtnX2JyYW5kIjoiRmVpc2h1IiwiY2xpZW50X3NjaGVtYSI6IngtZmVpc2h1In0%3D.ef90c28a91314aa34ee63125850923b52aa32084c3dd1b83aca4fabae849129a" target="_blank" rel="noopener"><b>运营</b><span>上架相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/bus" target="_blank" rel="noopener"><b>BUS</b><span>上会拉通支持</span><i class="inline-feishu">点入飞书链接</i></a></div>
+      <div class="role-grid"><a class="role-card" href="https://example.feishu.cn/wiki/marketing-bp" target="_blank" rel="noopener"><b>营销BP</b><span>营销相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/planning-bp" target="_blank" rel="noopener"><b>计划BP</b><span>库存相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/team-leader" target="_blank" rel="noopener"><b>组长</b><span>所有业务支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/pm" target="_blank" rel="noopener"><b>PM</b><span>产品相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/vc" target="_blank" rel="noopener"><b>VC支持</b><span>促销异常接单支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/data-analysis" target="_blank" rel="noopener"><b>数分</b><span>数据相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://songmicshome.feishu.cn/wiki/OBSpw2HuoiX8xfkbFX8c3i6XnCh?sheet=P0Zykv&amp;disposable_login_token=eyJ1c2VyX2lkIjoiNzEwMzMzMDYxNTY2MzIzMDk4MCIsImRldmljZV9sb2dpbl9pZCI6IjcxMDMzNTA3NDgyNDY3MzY5MDAiLCJ0aW1lc3RhbXAiOjE3ODQwMTE3NjgsInVuaXQiOiJldV9uYyIsInB3ZF9sZXNzX2xvZ2luX2F1dGgiOiIxIiwidmVyc2lvbiI6InYzIiwidGVuYW50X2JyYW5kIjoiZmVpc2h1IiwicGtnX2JyYW5kIjoiRmVpc2h1IiwiY2xpZW50X3NjaGVtYSI6IngtZmVpc2h1In0%3D.ef90c28a91314aa34ee63125850923b52aa32084c3dd1b83aca4fabae849129a" target="_blank" rel="noopener"><b>运营</b><span>上架相关支持</span><i class="inline-feishu">点入飞书链接</i></a><a class="role-card" href="https://example.feishu.cn/wiki/bus" target="_blank" rel="noopener"><b>BUS</b><span>上会拉通支持</span><i class="inline-feishu">点入飞书链接</i></a></div>
       </div>
       <div class="org-table-wrap">
         <table class="org-table">
@@ -92,11 +102,11 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
       <div class="business-calendar" aria-labelledby="calendar-title">
         <h3 class="calendar-title" id="calendar-title">业务日历</h3>
         <div class="calendar-grid">
-          <div class="calendar-card"><b>周一</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① DDP接单</li><li>② 活动提报</li><li>③ 自身榜单巡检</li><li>④ 新品上架</li><li>⑤ XDCP推进</li></ul></div>
-          <div class="calendar-card"><b>周二</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① <a href="https://songmicshome.feishu.cn/sheets/MQgosZoArheTVPt8X18cgMOznkc?sheet=dwpUUg" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">站外提报</a></li><li>② 活动审核</li><li>③ 自身榜单巡检</li><li>④ 新品上架</li><li>⑤ XDCP推进</li></ul></div>
-          <div class="calendar-card"><b>周三</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① 周度数据更新（价促营库销）</li><li>② 自身榜单巡检</li><li>③ 新品上架</li><li>④ XDCP推进</li></ul></div>
-          <div class="calendar-card"><b>周四</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① BTR接单</li><li>② 活动调整</li><li>③ <a href="https://songmicshome.feishu.cn/wiki/S7klww2jEi8pY9kqNlbcoWt8nle?sheet=LogTyS" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">冲坑复盘</a></li><li>④ 自身榜单巡检</li><li>⑤ 新品上架</li><li>⑥ XDCP推进</li></ul></div>
-          <div class="calendar-card"><b>周五</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① 周度项目复盘（价促营库销）</li><li>② 自身榜单巡检</li><li>③ 新品上架</li><li>④ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周一</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① <a href="https://songmicshome.feishu.cn/sheets/QGqlsW2GNhCbH5tK7l1cJp3JnHf?sheet=BttaDn" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">DDP接单</a></li><li>② <a href="https://songmicshome.feishu.cn/wiki/VX9MwWjPtiCIRTkWhAScFBKDnbf?sheet=b3af9a" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">活动提报</a></li><li>③ <a href="https://songmicshome.feishu.cn/wiki/FckSwEFgxizJHdk60mHcx84Fn9f?table=tbl1jpO54NC0rxTQ&view=vewEcBOGTR" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">BSR&amp;NR榜单巡检</a></li><li>④ <a href="https://songmicshome.feishu.cn/wiki/LL2GwjpHwiQqCXkfiLkc4hqqnig?sheet=3PLFy5" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">新品上架</a></li><li>⑤ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周二</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① <a href="https://songmicshome.feishu.cn/sheets/MQgosZoArheTVPt8X18cgMOznkc?sheet=dwpUUg" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">站外提报</a></li><li>② <a href="https://songmicshome.feishu.cn/wiki/VX9MwWjPtiCIRTkWhAScFBKDnbf?sheet=b3af9a" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">活动审核</a></li><li>③ <a href="https://songmicshome.feishu.cn/wiki/FckSwEFgxizJHdk60mHcx84Fn9f?table=tbl1jpO54NC0rxTQ&view=vewEcBOGTR" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">BSR&amp;NR榜单巡检</a></li><li>④ <a href="https://songmicshome.feishu.cn/wiki/LL2GwjpHwiQqCXkfiLkc4hqqnig?sheet=3PLFy5" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">新品上架</a></li><li>⑤ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周三</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① 二、周度数据更新（价促营库销）：组群</li><li>② <a href="https://songmicshome.feishu.cn/wiki/FckSwEFgxizJHdk60mHcx84Fn9f?table=tbl1jpO54NC0rxTQ&view=vewEcBOGTR" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">BSR&amp;NR榜单巡检</a></li><li>③ <a href="https://songmicshome.feishu.cn/wiki/LL2GwjpHwiQqCXkfiLkc4hqqnig?sheet=3PLFy5" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">新品上架</a></li><li>④ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周四</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① BTR接单：群 | US-VC工作沟通群</li><li>② 活动调整</li><li>③ <a href="https://songmicshome.feishu.cn/wiki/S7klww2jEi8pY9kqNlbcoWt8nle?sheet=LogTyS" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">冲坑复盘</a></li><li>④ <a href="https://songmicshome.feishu.cn/wiki/FckSwEFgxizJHdk60mHcx84Fn9f?table=tbl1jpO54NC0rxTQ&view=vewEcBOGTR" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">BSR&amp;NR榜单巡检</a></li><li>⑤ <a href="https://songmicshome.feishu.cn/wiki/LL2GwjpHwiQqCXkfiLkc4hqqnig?sheet=3PLFy5" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">新品上架</a></li><li>⑥ XDCP推进</li></ul></div>
+          <div class="calendar-card"><b>周五</b><div style="font-size:12px;font-weight:900;color:#b42318;margin-bottom:6px;line-height:1.35">❗自身巡检：购物车（比价）、广告抑制、销坑、区域化限制、花费</div><ul class="calendar-list"><li>① 周度项目复盘（价促营库销）</li><li>② <a href="https://songmicshome.feishu.cn/wiki/FckSwEFgxizJHdk60mHcx84Fn9f?table=tbl1jpO54NC0rxTQ&view=vewEcBOGTR" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">BSR&amp;NR榜单巡检</a></li><li>③ <a href="https://songmicshome.feishu.cn/wiki/LL2GwjpHwiQqCXkfiLkc4hqqnig?sheet=3PLFy5" target="_blank" rel="noopener" style="color:#276ef1;font-weight:850;">新品上架</a></li><li>④ XDCP推进</li></ul></div>
         </div>
       </div>
     </section>
@@ -145,7 +155,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">筑基期</div>
     <h2>业务认知</h2>
     <div class="purpose">跟着看</div>
-    <div class="standard-box"><b>过关标准</b><span>考核通过</span></div>
+    <div class="standard-box"><b>过关标准</b><span>转正成功</span><div class="standard-flow"><span class="flow-step">入职</span><span class="flow-arrow-s">→</span><span class="flow-step">集训</span><span class="flow-arrow-s">→</span><span class="flow-step">导师带教</span><span class="flow-arrow-s">→</span><span class="flow-step">转正成功</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -192,7 +202,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">掌旗期</div>
     <h2>品类规划</h2>
     <div class="purpose">跟着看</div>
-    <div class="standard-box"><b>过关标准</b><span>无</span></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过</span><div class="standard-flow"><span class="flow-step">PM</span><span class="flow-arrow-s">→</span><span class="flow-step">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step">公司审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -239,7 +249,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">掌旗期</div>
     <h2>新品CD</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>过审、合规</span></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过，合规，立项</span><div class="standard-flow"><span class="flow-step">PM</span><span class="flow-arrow-s">→</span><span class="flow-step">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step">公司审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -286,7 +296,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="phase">掌旗期</div>
     <h2>新品ND</h2>
     <div class="purpose">做推演</div>
-    <div class="standard-box"><b>过关标准</b><span>过审</span></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过，合规，订货</span><div class="standard-flow"><span class="flow-step">PM</span><span class="flow-arrow-s">→</span><span class="flow-step">销售团队</span><span class="flow-arrow-s">→</span><span class="flow-step">BU团队</span><span class="flow-arrow-s">→</span><span class="flow-step">公司审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -328,12 +338,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </section>
 </article>
 <article class="stage-card " id="step-5" data-step="05" data-title="图片验收">
-  <div class="stage-index" style="--stage-color:#7a4b12">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
     <div class="num">05</div>
-    <div class="phase">掌旗期</div>
+    <div class="phase">准备期</div>
     <h2>图片验收</h2>
     <div class="purpose">做验收</div>
-    <div class="standard-box"><b>过关标准</b><span>销售认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>销售审核通过</span><div class="standard-flow"><span class="flow-step">BUS/PM</span><span class="flow-arrow-s">→</span><span class="flow-step">卖点沟通会</span><span class="flow-arrow-s">→</span><span class="flow-step">设计沟通会</span><span class="flow-arrow-s">→</span><span class="flow-step">主案交付</span><span class="flow-arrow-s">→</span><span class="flow-step">销售验图</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -375,12 +385,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </section>
 </article>
 <article class="stage-card " id="step-6" data-step="06" data-title="AI文案">
-  <div class="stage-index" style="--stage-color:#08746f">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
     <div class="num">06</div>
-    <div class="phase">操盘期</div>
+    <div class="phase">准备期</div>
     <h2>AI文案</h2>
     <div class="purpose">做纠正</div>
-    <div class="standard-box"><b>过关标准</b><span>销售认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>销售审核通过</span><div class="standard-flow"><span class="flow-step">AI初版</span><span class="flow-arrow-s">→</span><span class="flow-step">销售修改</span><span class="flow-arrow-s">→</span><span class="flow-step">文案确定</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -422,12 +432,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </section>
 </article>
 <article class="stage-card " id="step-7" data-step="07" data-title="新品上架">
-  <div class="stage-index" style="--stage-color:#08746f">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
     <div class="num">07</div>
-    <div class="phase">操盘期</div>
+    <div class="phase">准备期</div>
     <h2>新品上架</h2>
     <div class="purpose">出报价</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">单仓到货</span><span class="flow-arrow-s">→</span><span class="flow-step">销售报价</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span><span class="flow-arrow-s">→</span><span class="flow-step">运营创建ASIN&amp;OFFER</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -469,12 +479,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </section>
 </article>
 <article class="stage-card " id="step-8" data-step="08" data-title="单子构建">
-  <div class="stage-index" style="--stage-color:#08746f">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
     <div class="num">08</div>
-    <div class="phase">操盘期</div>
+    <div class="phase">准备期</div>
     <h2>单子构建</h2>
     <div class="purpose">提诉求</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售捆绑僵尸/释放VINE/不捆绑僵尸</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -516,12 +526,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </section>
 </article>
 <article class="stage-card " id="step-9" data-step="09" data-title="单子关联">
-  <div class="stage-index" style="--stage-color:#08746f">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
     <div class="num">09</div>
-    <div class="phase">操盘期</div>
+    <div class="phase">准备期</div>
     <h2>单子关联</h2>
     <div class="purpose">提诉求</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售捆绑NM/A+外链</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -563,12 +573,12 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   </section>
 </article>
 <article class="stage-card " id="step-10" data-step="10" data-title="官媒发布">
-  <div class="stage-index" style="--stage-color:#08746f">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
     <div class="num">10</div>
-    <div class="phase">操盘期</div>
+    <div class="phase">准备期</div>
     <h2>官媒发布</h2>
     <div class="purpose">提诉求</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>待定</span><div class="standard-flow"><span class="flow-step">待定</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -609,13 +619,60 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-11" data-step="11" data-title="营销搭建">
-  <div class="stage-index" style="--stage-color:#08746f">
+<article class="stage-card " id="step-11" data-step="11" data-title="红人营销">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
     <div class="num">11</div>
-    <div class="phase">操盘期</div>
+    <div class="phase">准备期</div>
+    <h2>红人营销</h2>
+    <div class="purpose">提诉求</div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售提报</span><span class="flow-arrow-s">→</span><span class="flow-step">红人视频/站内CC/站外红人合作</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核</span></div></div>
+  </div>
+
+  <section class="panel panel-actions">
+    <div class="panel-kicker">阶段目的</div>
+    <h3>做什么 我要做</h3>
+    <ul class="action-list"><li>① 提报红人视频</li><li>② 提报CC营销</li></ul>
+    <div class="sub-panel">
+      <h4>要什么 向谁要</h4>
+      <ul class="request-list"><li>① 站外推广资源</li></ul>
+    </div>
+  </section>
+
+  <section class="panel panel-meta">
+    <div class="panel-kicker">角色梳理</div>
+    <h3>协同 / 角色</h3>
+    <div class="meta-grid">
+      <div><b>组内协同</b><span>组长</span></div>
+      <div><b>外部协同</b><span>站外营销BP</span></div>
+      <div><b>角色要求</b><span>纠正</span></div>
+      <div><b>销售输出</b><span class="bool yes">Y</span></div>
+    </div>
+    <div class="audit audit-normal"><b>审核要求</b><span>Y</span></div>
+  </section>
+
+  <section class="panel panel-output">
+    <div class="panel-kicker">流程疏通</div>
+    <h3>输出要求</h3>
+    <div class="doc-links"><a class="doc-link" href="https://example.feishu.cn/docx/cc-cooperation" target="_blank" rel="noopener"><span>CC合作流程链接</span><em>飞书链接</em></a><a class="doc-link" href="https://example.feishu.cn/docx/outdoor-cooperation" target="_blank" rel="noopener"><span>站外合作流程链接</span><em>飞书链接</em></a></div>
+  </section>
+
+  <section class="panel panel-detail">
+    <div class="panel-kicker">其他</div>
+    <h3>做什么 细节</h3>
+    <div class="empty">无</div>
+    <div class="sub-panel">
+      <h4>要什么 细节</h4>
+      <div class="empty">无</div>
+    </div>
+  </section>
+</article>
+<article class="stage-card " id="step-12" data-step="12" data-title="营销搭建">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
+    <div class="num">12</div>
+    <div class="phase">准备期</div>
     <h2>营销搭建</h2>
     <div class="purpose">出框架</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">销售搭建营销框架</span><span class="flow-arrow-s">→</span><span class="flow-step">组长审核通过</span><span class="flow-arrow-s">→</span><span class="flow-step">销售后台创建</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -656,13 +713,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-12" data-step="12" data-title="开售发布">
-  <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">12</div>
-    <div class="phase">操盘期</div>
+<article class="stage-card " id="step-13" data-step="13" data-title="开售发布">
+  <div class="stage-index" style="--stage-color:#5b2c8a">
+    <div class="num">13</div>
+    <div class="phase">准备期</div>
     <h2>开售发布</h2>
     <div class="purpose">发通知</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>自行发布</span><div class="standard-flow"><span class="flow-step">运营详细上货</span><span class="flow-arrow-s">→</span><span class="flow-step">销售做好准备工作</span><span class="flow-arrow-s">→</span><span class="flow-step">前台开售购物车正常</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -703,13 +760,36 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-13" data-step="13" data-title="单品复盘">
+
+<section class="checklist-section" id="checklist-launch">
+  <div class="checklist-title">开售发布 CHECK LIST</div>
+  <div class="checklist-day">D1-D2</div>
+  <div class="checklist-row">
+    <span class="checklist-item">详细上货成功</span>
+    <span class="checklist-item">综合单合并成功</span>
+    <span class="checklist-item">僵尸/VINE成功</span>
+    <span class="checklist-item">红人视频申请成功</span>
+    <span class="checklist-item">ITK正确</span>
+    <span class="checklist-item">购物车正常</span>
+    <span class="checklist-item">价格正常</span>
+    <span class="checklist-item">时效正常</span>
+    <span class="checklist-item">促销折扣正常</span>
+  </div>
+  <div class="checklist-day">D2-D3</div>
+  <div class="checklist-row">
+    <span class="checklist-item">大小类排名正常</span>
+    <span class="checklist-item">促销折扣正常</span>
+    <span class="checklist-item">后台营销曝光正常</span>
+    <span class="checklist-item">销量花费进度符合预期</span>
+  </div>
+</section>
+<article class="stage-card " id="step-14" data-step="14" data-title="单品复盘">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">13</div>
+    <div class="num">14</div>
     <div class="phase">操盘期</div>
     <h2>单品复盘</h2>
     <div class="purpose">做复盘</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">库存现状</span><span class="flow-arrow-s">→</span><span class="flow-step">销售确定销售方向 提/降销速</span><span class="flow-arrow-s">→</span><span class="flow-step">销售排布价促营</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -750,13 +830,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-14" data-step="14" data-title="营销操盘">
+<article class="stage-card " id="step-15" data-step="15" data-title="营销操盘">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">14</div>
+    <div class="num">15</div>
     <div class="phase">操盘期</div>
     <h2>营销操盘</h2>
     <div class="purpose">做调整</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step">确定广告费比目标</span><span class="flow-arrow-s">→</span><span class="flow-step">销售操盘营销</span><span class="flow-arrow-s">→</span><span class="flow-step">先达标、再优化</span><span class="flow-arrow-s">→</span><span class="flow-step">无效、低效依次优化</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -797,13 +877,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-15" data-step="15" data-title="促销操盘">
+<article class="stage-card " id="step-16" data-step="16" data-title="促销操盘">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">15</div>
+    <div class="num">16</div>
     <div class="phase">操盘期</div>
     <h2>促销操盘</h2>
     <div class="purpose">报促销</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step">确定促销节奏</span><span class="flow-arrow-s">→</span><span class="flow-step">销售操盘促销</span><span class="flow-arrow-s">→</span><span class="flow-step">先跟从SOP、再自定义 | 14+14、不同组合</span><span class="flow-arrow-s">→</span><span class="flow-step">注意增量增销额</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -844,13 +924,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-16" data-step="16" data-title="日常监控">
+<article class="stage-card " id="step-17" data-step="17" data-title="日常监控">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">16</div>
+    <div class="num">17</div>
     <div class="phase">操盘期</div>
     <h2>日常监控</h2>
     <div class="purpose">做监控</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step">销量达标 | 调整价促营</span><span class="flow-arrow-s">→</span><span class="flow-step">链接正常 | 反馈处理异常</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -891,13 +971,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-17" data-step="17" data-title="竞卖监控">
+<article class="stage-card " id="step-18" data-step="18" data-title="竞卖监控">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">17</div>
+    <div class="num">18</div>
     <div class="phase">操盘期</div>
     <h2>竞卖监控</h2>
     <div class="purpose">做监控</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">确定BSR/NR竞卖趋势</span><span class="flow-arrow-s">→</span><span class="flow-step">上升竞卖/下降竞卖</span><span class="flow-arrow-s">→</span><span class="flow-step">研究操作/新增新品诉求/应对反击</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -938,13 +1018,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-18" data-step="18" data-title="项目复盘">
+<article class="stage-card " id="step-19" data-step="19" data-title="项目复盘">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">18</div>
+    <div class="num">19</div>
     <div class="phase">操盘期</div>
     <h2>项目复盘</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">项目复盘</span><span class="flow-arrow-s">→</span><span class="flow-step">大数进度盘点 | 进度 &amp; 销毛额</span><span class="flow-arrow-s">→</span><span class="flow-step">拆分LISTING+SKU复盘 | 月度</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -985,13 +1065,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-19" data-step="19" data-title="市场复盘">
+<article class="stage-card " id="step-20" data-step="20" data-title="市场复盘">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">19</div>
+    <div class="num">20</div>
     <div class="phase">操盘期</div>
     <h2>市场复盘</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>组长认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">市场复盘</span><span class="flow-arrow-s">→</span><span class="flow-step">大数进度盘点 | 趋势 &amp; 市占位次</span><span class="flow-arrow-s">→</span><span class="flow-step">拆分品牌+主竞卖复盘 | 月度</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1032,13 +1112,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-20" data-step="20" data-title="预测盘点">
+<article class="stage-card " id="step-21" data-step="21" data-title="预测盘点">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">20</div>
+    <div class="num">21</div>
     <div class="phase">操盘期</div>
     <h2>预测盘点</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>美线认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step">计划BP盘点</span><span class="flow-arrow-s">→</span><span class="flow-step">组长确定调整方向</span><span class="flow-arrow-s">→</span><span class="flow-step">组内沟通</span><span class="flow-arrow-s">→</span><span class="flow-step">销售调整预测</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1079,13 +1159,13 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
-<article class="stage-card " id="step-21" data-step="21" data-title="产品下市">
+<article class="stage-card " id="step-22" data-step="22" data-title="产品下市">
   <div class="stage-index" style="--stage-color:#08746f">
-    <div class="num">21</div>
+    <div class="num">22</div>
     <div class="phase">操盘期</div>
     <h2>产品下市</h2>
     <div class="purpose">做分析</div>
-    <div class="standard-box"><b>过关标准</b><span>美线认可过关</span></div>
+    <div class="standard-box"><b>过关标准</b><span>公司审核通过</span><div class="standard-flow"><span class="flow-step">销售发起诉求</span><span class="flow-arrow-s">→</span><span class="flow-step">组长复盘确定</span><span class="flow-arrow-s">→</span><span class="flow-step">联动BU&amp;美线确定下市</span><span class="flow-arrow-s">→</span><span class="flow-step">计划停止下单</span><span class="flow-arrow-s">→</span><span class="flow-step">销售以库定销修改预测</span></div></div>
   </div>
 
   <section class="panel panel-actions">
@@ -1128,7 +1208,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
 </article>
   </main>
 </div>
-<nav class="float-nav" aria-label="阶段快速导航"><div class="float-nav-inner"><div class="nav-group" style="--group-color:#204f9c;flex:2"><div class="nav-group-label">筑基期</div><div class="nav-group-box"><a href="#step-1"><b>01</b><span>业务认知</span></a></div></div><div class="nav-group" style="--group-color:#7a4b12;flex:5"><div class="nav-group-label">掌旗期</div><div class="nav-group-box"><a href="#step-2"><b>02</b><span>品类规划</span></a><a href="#step-3"><b>03</b><span>新品CD</span></a><a href="#step-4"><b>04</b><span>新品ND</span></a><a href="#step-5"><b>05</b><span>图片验收</span></a></div></div><div class="nav-group" style="--group-color:#08746f;flex:14"><div class="nav-group-label">操盘期</div><div class="nav-group-box"><a href="#step-6"><b>06</b><span>AI文案</span></a><a href="#step-7"><b>07</b><span>新品上架</span></a><a href="#step-8"><b>08</b><span>单子构建</span></a><a href="#step-9"><b>09</b><span>单子关联</span></a><a href="#step-10"><b>10</b><span>官媒发布</span></a><a href="#step-11"><b>11</b><span>营销搭建</span></a><a href="#step-12"><b>12</b><span>开售发布</span></a><a href="#step-13"><b>13</b><span>单品复盘</span></a><a href="#step-14"><b>14</b><span>营销操盘</span></a><a href="#step-15"><b>15</b><span>促销操盘</span></a><a href="#step-16"><b>16</b><span>日常监控</span></a><a href="#step-17"><b>17</b><span>竞卖监控</span></a><a href="#step-18"><b>18</b><span>项目复盘</span></a><a href="#step-19"><b>19</b><span>市场复盘</span></a><a href="#step-20"><b>20</b><span>预测盘点</span></a><a href="#step-21"><b>21</b><span>产品下市</span></a></div></div></div></nav>
+<nav class="float-nav" aria-label="阶段快速导航"><div class="float-nav-inner"><div class="nav-group" style="--group-color:#204f9c;flex:2"><div class="nav-group-label">筑基期</div><div class="nav-group-box"><a href="#step-1"><b>01</b><span>业务认知</span></a></div></div><div class="nav-group" style="--group-color:#7a4b12;flex:4"><div class="nav-group-label">掌旗期</div><div class="nav-group-box"><a href="#step-2"><b>02</b><span>品类规划</span></a><a href="#step-3"><b>03</b><span>新品CD</span></a><a href="#step-4"><b>04</b><span>新品ND</span></a></div></div><div class="nav-group" style="--group-color:#5b2c8a;flex:10"><div class="nav-group-label">准备期</div><div class="nav-group-box"><a href="#step-5"><b>05</b><span>图片验收</span></a><a href="#step-6"><b>06</b><span>AI文案</span></a><a href="#step-7"><b>07</b><span>新品上架</span></a><a href="#step-8"><b>08</b><span>单子构建</span></a><a href="#step-9"><b>09</b><span>单子关联</span></a><a href="#step-10"><b>10</b><span>官媒发布</span></a><a href="#step-11"><b>11</b><span>红人营销</span></a><a href="#step-12"><b>12</b><span>营销搭建</span></a><a href="#step-13"><b>13</b><span>开售发布</span></a></div></div><div class="nav-group" style="--group-color:#08746f;flex:10"><div class="nav-group-label">操盘期</div><div class="nav-group-box"><a href="#step-14"><b>14</b><span>单品复盘</span></a><a href="#step-15"><b>15</b><span>营销操盘</span></a><a href="#step-16"><b>16</b><span>促销操盘</span></a><a href="#step-17"><b>17</b><span>日常监控</span></a><a href="#step-18"><b>18</b><span>竞卖监控</span></a><a href="#step-19"><b>19</b><span>项目复盘</span></a><a href="#step-20"><b>20</b><span>市场复盘</span></a><a href="#step-21"><b>21</b><span>预测盘点</span></a><a href="#step-22"><b>22</b><span>产品下市</span></a></div></div></div></nav>
 <script>
 (function(){
   const cards=[...document.querySelectorAll('.stage-card')];
