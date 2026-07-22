@@ -69,6 +69,26 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
 .checklist-day{font-size:13px;font-weight:950;color:#08746f;margin:8px 0 4px}
 .checklist-row{display:flex;gap:8px;flex-wrap:wrap}
 .checklist-item{display:inline-flex;align-items:center;padding:5px 10px;border:1px solid #b9ded8;border-radius:10px;font-size:12px;font-weight:700;background:#fff;color:#344054}
+
+/* ---- 广告操盘流程图 ---- */
+.ad-flow-section{margin:16px 0;border:2px solid #08746f;border-radius:20px;padding:18px 22px;background:linear-gradient(135deg,#f0fdfa,#fff);scroll-margin-top:206px}
+.ad-flow-title{font-size:17px;font-weight:1000;color:#08746f;text-align:center;margin-bottom:16px;padding:7px 20px;border-radius:999px;background:linear-gradient(135deg,#e0f5f2,#d4f0ec);border:1px solid #b2e0db;display:block}
+.ad-flow-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:start}
+.ad-flow-column{display:flex;flex-direction:column;align-items:center;gap:10px;background:#f8fcfd;border-radius:12px;border:1px solid #dce8ed;padding:12px 10px}
+.ad-layer-label{font-size:13px;font-weight:700;color:#08746f;text-align:center;padding:4px 14px;border-radius:999px;background:#eef5ff;border:1px solid #cfe0f7;margin-bottom:4px}
+.ad-flow-node{display:flex;flex-direction:column;align-items:stretch;gap:4px;background:#fff;border:1px solid #d0dae8;border-radius:10px;padding:8px 10px;transition:box-shadow .2s;width:100%}
+.ad-flow-node:hover{box-shadow:0 4px 16px rgba(8,116,111,.15)}
+.ad-node-text{font-size:12px;font-weight:700;color:#071529;text-align:left;line-height:1.5;white-space:nowrap}
+.ad-node-arrow-text{font-size:11px;color:#08746f;font-weight:900;margin-right:3px}
+.ad-node-img-wrap{cursor:pointer;position:relative;text-align:center;width:100%}
+.ad-flow-img{max-width:100%;max-height:85px;border:1px solid #ccc;border-radius:5px;cursor:pointer;transition:transform .2s,box-shadow .2s;object-fit:contain;display:block;margin:0 auto}
+.ad-flow-img:hover{transform:scale(1.08);box-shadow:0 3px 12px rgba(0,0,0,.15)}
+.ad-img-hint{display:none}
+.ad-node-center{grid-column:1/-1;justify-self:center;min-width:160px}
+/* ---- nav-stock-tag hover tooltip ---- */
+.nav-item-wrap{position:relative}
+.nav-stock-tag-hint{position:absolute;top:-6px;left:50%;transform:translate(-50%,-100%);font-size:12px;color:#071529;background:#fff;border:1.5px solid #08746f;border-radius:7px;padding:3px 9px;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.18);z-index:9999;pointer-events:none;display:none}
+
 </style>
 </head>
 <body>
@@ -1313,7 +1333,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="num">14</div>
     <div class="phase">操盘期</div>
     <h2>单品复盘</h2>
-    <div class="purpose">做复盘</div>
+    <div class="purpose">做调整 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每天</span></div>
     <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">库存现状</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售确定销售方向 提/降销速</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售排布价促营</span></div></div>
   </div>
 
@@ -1365,7 +1385,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="num">15</div>
     <div class="phase">操盘期</div>
     <h2>营销操盘</h2>
-    <div class="purpose">做调整</div>
+    <div class="purpose">做调整 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每天</span></div>
     <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">确定广告费比目标</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售操盘营销</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">先达标、再优化</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">无效、低效依次优化</span></div></div>
   </div>
 
@@ -1412,12 +1432,82 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     </div>
   </section>
 </article>
+<section class="ad-flow-section" id="ad-flow">
+  <div class="ad-flow-title">广告操盘 | 8层次</div>
+  <div class="ad-flow-grid">
+    <div class="ad-flow-column ad-col-1">
+      <div class="ad-layer-label">第一层：广告PORT</div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>不共享预算</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-port.jpg" alt="PORT示意图" style="max-width:110px;max-height:75px" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+    </div>
+    <div class="ad-flow-column ad-col-2">
+      <div class="ad-layer-label">第二层：广告活动</div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>活动预算 | 预算规则</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-budget-rule.jpeg" alt="预算规则示意图" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>设置规则 | 限制站外曝光</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-setting-rule.jpg" alt="设置规则示意图" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>竞价调整 | 位置/AMC/B2B/SPV</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-bidding-rule.jpg" alt="竞价规则示意图" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>竞价策略 | 固定/仅降低/动态/基于规则</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-bidding-strategy.jpeg" alt="竞价策略示意图" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+    </div>
+    <div class="ad-flow-column ad-col-3">
+      <div class="ad-layer-label">第三层：广告组</div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>投放SKU | 规避混投</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-target-sku.jpeg" alt="投放SKU示意图" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>投放关键词 | 规避词数≥10</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-target-keyword.jpeg" alt="投放关键词示意图" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+      <div class="ad-flow-node">
+        <div class="ad-node-text"><span class="ad-node-arrow-text">→</span>实际搜索词 | 精否</div>
+        <div class="ad-node-img-wrap">
+          <img class="ad-flow-img" src="images/ad-search-term.jpeg" alt="实际搜索词示意图" loading="lazy" onerror="this.style.display='none'">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <article class="stage-card " id="step-17" data-step="17" data-title="促销操盘">
   <div class="stage-index" style="--stage-color:#08746f">
     <div class="num">16</div>
     <div class="phase">操盘期</div>
     <h2>促销操盘</h2>
-    <div class="purpose">促销预排</div>
+    <div class="purpose">促销预排 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每天/每周</span></div>
     <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">确定销量目标</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">确定促销节奏</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售操盘促销</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">先跟从SOP、再自定义 | 14+14、不同组合</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">注意增量增销额</span></div></div>
   </div>
 
@@ -1625,7 +1715,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="num">20</div>
     <div class="phase">操盘期</div>
     <h2>市场复盘</h2>
-    <div class="purpose">做分析</div>
+    <div class="purpose">做分析 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每月1次</span></div>
     <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">市场复盘</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">大数进度盘点 | 趋势 &amp; 市占位次</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">拆分品牌+主竞卖复盘 | 月度</span></div></div>
   </div>
 
@@ -1677,7 +1767,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="num">21</div>
     <div class="phase">操盘期</div>
     <h2>预测盘点</h2>
-    <div class="purpose">做分析</div>
+    <div class="purpose">做分析 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每月2次</span></div>
     <div class="standard-box"><b>过关标准</b><span>组长审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">计划BP盘点</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">组长确定调整方向</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">组内沟通</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">销售调整预测</span></div></div>
   </div>
 
@@ -1729,7 +1819,7 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
     <div class="num">22</div>
     <div class="phase">操盘期</div>
     <h2>产品下市</h2>
-    <div class="purpose">做分析</div>
+    <div class="purpose">做分析 | <span style="background:#b42318;color:#fff;padding:2px 8px;border-radius:999px;font-size:11px;">每季度1次</span></div>
     <div class="standard-box"><b>过关标准</b><span>公司审核通过</span><div class="standard-flow"><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售发起诉求</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">组长复盘确定</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">联动BU&amp;美线确定下市</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#5b21b6;border-color:#5b21b6;">计划停止下单</span><span class="flow-arrow-s">→</span><span class="flow-step" style="color:#1e40af;border-color:#1e40af;">销售以库定销修改预测</span></div></div>
   </div>
 
@@ -1820,5 +1910,52 @@ h1{margin:0;font-size:42px;line-height:1.05;letter-spacing:-.045em;color:#061329
   });
 })();
 </script>
+
+<script>
+(function(){
+  var imgs=document.querySelectorAll('.ad-flow-img');
+  var overlay=null,removeTimer=null;
+  imgs.forEach(function(img){
+    img.addEventListener('mouseenter',function(){
+      clearTimeout(removeTimer);
+      if(overlay){overlay.remove();overlay=null;}
+      overlay=document.createElement('div');
+      overlay.style.cssText='position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:99999;display:flex;align-items:center;justify-content:center;pointer-events:none;background:rgba(7,23,47,0.72);';
+      var clone=document.createElement('img');
+      clone.src=img.src;
+      clone.style.cssText='max-width:85vw;max-height:85vh;border-radius:12px;box-shadow:0 24px 72px rgba(0,0,0,0.55);object-fit:contain;';
+      overlay.appendChild(clone);
+      document.body.appendChild(overlay);
+    });
+    img.addEventListener('mouseleave',function(){
+      removeTimer=setTimeout(function(){
+        if(overlay){overlay.remove();overlay=null;}
+      },200);
+    });
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  var tags=document.querySelectorAll('.nav-stock-tag');
+  var hint=null;
+  tags.forEach(function(tag){
+    tag.addEventListener('mouseenter',function(){
+      if(hint){hint.remove();}
+      hint=document.createElement('div');
+      hint.className='nav-stock-tag-hint';
+      hint.textContent=tag.textContent.trim();
+      hint.style.display='block';
+      tag.parentNode.appendChild(hint);
+    });
+    tag.addEventListener('mouseleave',function(){
+      if(hint){hint.style.display='none';}
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
